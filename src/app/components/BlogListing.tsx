@@ -1,6 +1,7 @@
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { ArrowRight, Calendar, Clock } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
+import Image from "next/image";
 
 interface BlogPost {
   id: string;
@@ -29,9 +30,11 @@ export function BlogListing({ posts, onPostClick }: BlogListingProps) {
         >
           {post.imageUrl && (
             <div className="aspect-video overflow-hidden bg-muted">
-              <img 
+              <Image 
                 src={post.imageUrl}
                 alt={post.title}
+                width={400}
+                height={225}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>

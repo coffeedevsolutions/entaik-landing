@@ -1,4 +1,5 @@
 import { Twitter, Linkedin, Github } from "lucide-react";
+import Link from "next/link";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -34,7 +35,7 @@ export function Footer() {
             <h4 className="font-semibold">Company</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="#" className="hover:text-foreground transition-colors">About</a></li>
-              <li><a href="/blog" className="hover:text-foreground transition-colors">Blog</a></li>
+              <li><Link href="/blog" className="hover:text-foreground transition-colors">Blog</Link></li>
               <li><a href="#" className="hover:text-foreground transition-colors">Contact</a></li>
               <li><a href="#" className="hover:text-foreground transition-colors">Careers</a></li>
             </ul>

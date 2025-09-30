@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
 import { Card } from "./ui/card";
 import Link from "next/link";
+import Image from "next/image";
 
 interface BlogArticle {
   id: string;
@@ -117,9 +118,11 @@ export function BlogPage({ article, onNavigate }: BlogPageProps) {
 
             {/* Hero Image */}
             <div className="mb-12">
-              <img 
+              <Image 
                 src={article.heroImage}
                 alt={article.title}
+                width={800}
+                height={400}
                 className="w-full rounded-2xl shadow-lg"
               />
             </div>
