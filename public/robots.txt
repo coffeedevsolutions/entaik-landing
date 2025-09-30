@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /private/
+
+# Host
+Host: https://intakeflow.ai
+
+# Sitemaps
+Sitemap: https://intakeflow.ai/sitemap.xml
