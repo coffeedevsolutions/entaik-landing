@@ -2,15 +2,14 @@ import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { ArrowRight, Calendar } from "lucide-react";
 import Link from "next/link";
-import { allBlogPosts } from "@/data/blogs";
 import { BlogPost } from "@/types/blog";
 
 interface BlogHubProps {
   onNavigate?: (view: string, postId?: string) => void;
+  blogPosts?: BlogPost[];
 }
 
-export function BlogHub({ onNavigate }: BlogHubProps) {
-  const blogPosts: BlogPost[] = allBlogPosts;
+export function BlogHub({ onNavigate, blogPosts = [] }: BlogHubProps) {
 
   const handlePostClick = (postId: string) => {
     if (onNavigate) {
