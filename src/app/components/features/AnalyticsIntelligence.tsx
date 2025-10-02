@@ -3,6 +3,7 @@
 import { Card } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
+import { FeaturesNav } from "./FeaturesNav";
 import Link from "next/link";
 import { 
   BarChart3, 
@@ -152,8 +153,11 @@ const integrationPoints = [
 
 export function AnalyticsIntelligence({ onNavigate }: AnalyticsIntelligenceProps) {
   return (
-    <div className="pt-20 pb-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="pb-0">
+      {/* Top Features Navigation */}
+      <FeaturesNav variant="top" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Hero Section */}
         <div className="text-center mb-20 space-y-6 pt-12">
           <Badge className="bg-gradient-to-r from-orange-100 to-amber-100 text-orange-700 hover:bg-orange-100 border-orange-200">
@@ -372,6 +376,9 @@ export function AnalyticsIntelligence({ onNavigate }: AnalyticsIntelligenceProps
           )}
         </div>
       </div>
+      
+      {/* Bottom Features Navigation */}
+      <FeaturesNav variant="bottom" />
     </div>
   );
 }

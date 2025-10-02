@@ -3,6 +3,7 @@
 import { Card } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
+import { FeaturesNav } from "./FeaturesNav";
 import Link from "next/link";
 import { IntakeSamples } from "../intake-flows/IntakeSamples";
 import { 
@@ -151,8 +152,11 @@ const integrationPoints = [
 
 export function AISurveyPlatform({ onNavigate }: AISurveyPlatformProps) {
   return (
-    <div className="pt-20 pb-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="pb-0">
+      {/* Top Features Navigation */}
+      <FeaturesNav variant="top" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Hero Section */}
         <div className="text-center mb-20 space-y-6 pt-12">
           <Badge className="bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 hover:bg-blue-100 border-blue-200">
@@ -376,6 +380,9 @@ export function AISurveyPlatform({ onNavigate }: AISurveyPlatformProps) {
           )}
         </div>
       </div>
+      
+      {/* Bottom Features Navigation */}
+      <FeaturesNav variant="bottom" />
     </div>
   );
 }

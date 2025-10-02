@@ -11,6 +11,7 @@ import {
   NotebookText
 } from "lucide-react";
 import { Card } from "./ui/card";
+import Link from "next/link";
 
 export function ProblemSolution() {
   const problems = [
@@ -157,10 +158,13 @@ export function ProblemSolution() {
               <p className="text-lg text-gray-600">
                 Ready to eliminate project intake chaos?
               </p>
-              <div className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors cursor-pointer">
+              <Link 
+                href="/features/ai-survey-platform"
+                className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors cursor-pointer"
+              >
                 <span>Discover how Uptaik works</span>
                 <ArrowRight className="w-4 h-4" />
-              </div>
+              </Link>
             </div>
           </div>
         </div>
