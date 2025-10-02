@@ -1,81 +1,16 @@
-import { Navigation } from "./Navigation";
-import { Footer } from "./Footer";
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { ArrowRight, Calendar } from "lucide-react";
 import Link from "next/link";
-
-interface BlogPost {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  publishDate: string;
-  readTime: string;
-  author: string;
-}
+import { allBlogPosts } from "@/data/blogs";
+import { BlogPost } from "@/types/blog";
 
 interface BlogHubProps {
   onNavigate?: (view: string, postId?: string) => void;
 }
 
 export function BlogHub({ onNavigate }: BlogHubProps) {
-  const blogPosts: BlogPost[] = [
-    {
-      id: "ai-driven-pipelines",
-      title: "Replace ad-hoc intake with AI-driven pipelines",
-      description: "Learn how leading PMOs are transforming scattered intake processes into structured, automated workflows.",
-      category: "Best Practices",
-      publishDate: "2025-09-15",
-      readTime: "5 min read",
-      author: "Sarah Chen"
-    },
-    {
-      id: "prioritization-frameworks",
-      title: "RICE vs WSJF vs MoSCoW: choosing a prioritization model",
-      description: "A comprehensive guide to selecting the right prioritization framework for your organization's unique needs.",
-      category: "Framework Guide",
-      publishDate: "2025-09-10",
-      readTime: "8 min read",
-      author: "Michael Torres"
-    },
-    {
-      id: "jira-automation",
-      title: "From brief to backlog: automating epic creation in Jira",
-      description: "How AI can transform project briefs into properly structured Jira epics, stories, and tasks in seconds.",
-      category: "Technical",
-      publishDate: "2025-09-05",
-      readTime: "6 min read",
-      author: "Alex Rivera"
-    },
-    {
-      id: "construction-workflows",
-      title: "Building intake workflows for construction enterprises",
-      description: "Industry-specific patterns for capturing capital project requests with complete context and compliance documentation.",
-      category: "Industry Guide",
-      publishDate: "2025-08-28",
-      readTime: "7 min read",
-      author: "Jennifer Park"
-    },
-    {
-      id: "healthcare-compliance",
-      title: "Healthcare project intake: balancing speed and compliance",
-      description: "How healthcare organizations streamline intake while maintaining HIPAA compliance and patient safety standards.",
-      category: "Industry Guide",
-      publishDate: "2025-08-20",
-      readTime: "6 min read",
-      author: "Dr. Robert Kim"
-    },
-    {
-      id: "stakeholder-communication",
-      title: "Communicating prioritization decisions with data",
-      description: "Turn subjective prioritization debates into transparent, data-driven conversations with stakeholders.",
-      category: "Best Practices",
-      publishDate: "2025-08-15",
-      readTime: "5 min read",
-      author: "Sarah Chen"
-    }
-  ];
+  const blogPosts: BlogPost[] = allBlogPosts;
 
   const handlePostClick = (postId: string) => {
     if (onNavigate) {
@@ -85,10 +20,7 @@ export function BlogHub({ onNavigate }: BlogHubProps) {
   };
 
   return (
-    <div className="min-h-screen">
-      <Navigation onNavigate={onNavigate} currentView="blog-hub" />
-      
-      <main className="pt-20 pb-20">
+    <div className="pt-20 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
           <div className="text-center mb-16 space-y-4">
@@ -101,10 +33,10 @@ export function BlogHub({ onNavigate }: BlogHubProps) {
           </div>
 
           {/* Featured Post */}
-          <Link href={onNavigate ? "#" : `/blog/${blogPosts[0].id}`} className="block">
+          <Link href={onNavigate ? "#" : `/blog/${blogPosts[0].slug}`} className="block">
             <Card 
               className="mb-12 overflow-hidden hover:shadow-xl transition-all cursor-pointer group"
-              onClick={onNavigate ? () => handlePostClick(blogPosts[0].id) : undefined}
+              onClick={onNavigate ? () => handlePostClick(blogPosts[0].slug) : undefined}
             >
             <div className="grid md:grid-cols-2 gap-0">
               <div className="aspect-video md:aspect-auto bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 flex items-center justify-center p-12">
@@ -148,10 +80,10 @@ export function BlogHub({ onNavigate }: BlogHubProps) {
             <h2 className="text-2xl mb-8">All Articles</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               {blogPosts.map((post) => (
-                <Link key={post.id} href={onNavigate ? "#" : `/blog/${post.id}`} className="block">
+                <Link key={post.id} href={onNavigate ? "#" : `/blog/${post.slug}`} className="block">
                   <Card 
                     className="p-6 space-y-4 hover:shadow-lg transition-all group cursor-pointer"
-                    onClick={onNavigate ? () => handlePostClick(post.id) : undefined}
+                    onClick={onNavigate ? () => handlePostClick(post.slug) : undefined}
                   >
                   <div className="flex items-center justify-between gap-2">
                     <Badge variant="outline" className="text-blue-600 border-blue-200">
@@ -209,9 +141,6 @@ export function BlogHub({ onNavigate }: BlogHubProps) {
             </div>
           </div>
         </div>
-      </main>
-
-      <Footer />
     </div>
   );
 }

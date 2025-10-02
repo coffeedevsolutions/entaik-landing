@@ -1,16 +1,26 @@
 import type { Metadata } from "next";
 import { BlogHub } from "../components/BlogHub";
+import { Navigation } from "../components/Navigation";
+import { Footer } from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Blog - IntakeFlow | AI Project Intake Insights",
+  title: "Blog - uptaik | AI Project Intake Insights",
   description: "Discover best practices, frameworks, and insights for AI-powered project intake, prioritization, and automation. Expert guides for enterprise teams.",
   openGraph: {
-    title: "Blog - IntakeFlow | AI Project Intake Insights",
+    title: "Blog - uptaik | AI Project Intake Insights",
     description: "Discover best practices, frameworks, and insights for AI-powered project intake, prioritization, and automation.",
-    url: "https://intakeflow.ai/blog",
+    url: "https://uptaik.com/blog",
   },
 };
 
 export default function BlogHubPage() {
-  return <BlogHub />;
+  return (
+    <>
+      <Navigation />
+      <main>
+        <BlogHub />
+      </main>
+      <Footer />
+    </>
+  );
 }

@@ -57,7 +57,7 @@ export function Hero() {
             <div className="relative rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
               <Image
                 src="/images/screenshot-mockup-2.png"
-                alt="IntakeFlow AI dashboard mockup showing project intake interface"
+                alt="Uptaik AI dashboard mockup showing project intake interface"
                 width={800}
                 height={600}
                 className="w-full h-auto"

@@ -1,5 +1,6 @@
 import { Twitter, Linkedin, Github } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,8 +12,16 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg" />
-              <span className="font-semibold">IntakeAI</span>
+              <div className="relative w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <Image
+                  src="/images/uptaik-logo-2-white.png"
+                  alt="Uptaik Logo"
+                  width={28}
+                  height={28}
+                  className="relative z-10"
+                />
+              </div>
+              <span className="font-semibold">Uptaik</span>
             </div>
             <p className="text-sm text-muted-foreground">
               AI-powered project intake for non-tech enterprises.
@@ -56,7 +65,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} IntakeAI. All rights reserved.
+            © {currentYear} Uptaik. All rights reserved.
           </p>
           
           <div className="flex items-center gap-4">

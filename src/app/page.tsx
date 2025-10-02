@@ -3,20 +3,20 @@ import App from "./components/App";
 
 
 export const metadata: Metadata = {
-  title: "IntakeFlow — Transform Project Intake with AI | Beta Access",
+  title: "Uptaik — Transform Project Intake with AI | Beta Access",
   description:
     "Join the beta for AI-powered project intake that adapts, documents, and delivers. Transform scattered emails into structured briefs, automated prioritization, and Jira-ready epics.",
   openGraph: {
-    title: "IntakeFlow — Transform Project Intake with AI | Beta Access",
+    title: "Uptaik — Transform Project Intake with AI | Beta Access",
     description:
       "Join the beta for AI-powered project intake that adapts, documents, and delivers. Transform scattered emails into structured briefs.",
-    url: "https://intakeflow.ai",
+    url: "https://uptaik.com",
     images: [
       {
         url: "/og-hero.png",
         width: 1200,
         height: 630,
-        alt: "IntakeFlow AI project intake dashboard showing adaptive surveys and automated project briefs",
+        alt: "Uptaik AI project intake dashboard showing adaptive surveys and automated project briefs",
       },
     ],
   },
@@ -32,13 +32,13 @@ export default function HomePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            name: "IntakeFlow",
+            name: "Uptaik",
             applicationCategory: "BusinessApplication",
             operatingSystem: "Web",
             description:
               "AI-powered project intake with adaptive surveys, automated project briefs, prioritization, and Jira epic creation for enterprise teams.",
-            url: "https://intakeflow.ai",
-            screenshot: "https://intakeflow.ai/og-hero.png",
+            url: "https://uptaik.com",
+            screenshot: "https://uptaik.com/og-hero.png",
             featureList: [
               "Adaptive AI Intake Surveys",
               "Auto-Generated Project Briefs", 
@@ -57,9 +57,9 @@ export default function HomePage() {
             },
             publisher: {
               "@type": "Organization",
-              name: "IntakeFlow",
-              url: "https://intakeflow.ai",
-              logo: "https://intakeflow.ai/logo.png"
+              name: "Uptaik",
+              url: "https://uptaik.com",
+              logo: "https://uptaik.com/logo.png"
             },
             audience: {
               "@type": "Audience",

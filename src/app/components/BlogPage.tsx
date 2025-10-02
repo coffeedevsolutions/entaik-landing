@@ -220,87 +220,113 @@ export function BlogPage({ article, onNavigate }: BlogPageProps) {
 // Example blog article data
 export const exampleBlogArticle: BlogArticle = {
   id: "ai-driven-pipelines",
-  title: "Replace ad-hoc intake with AI-driven pipelines",
-  description: "Learn how leading PMOs are transforming scattered intake processes into structured, automated workflows that capture complete requirements and eliminate endless follow-ups.",
+  title: "Replace Ad-Hoc Intake with AI-Driven Pipelines",
+  description: "Discover how AI-driven intake pipelines transform chaotic project requests into structured, automated workflows that improve visibility, speed, and alignment.",
   category: "Best Practices",
-  publishDate: "2025-09-15",
-  readTime: "5 min read",
+  publishDate: "2024-12-15",
+  readTime: "7 min read",
   author: {
     name: "Sarah Chen",
-    role: "Product Strategy Lead"
+    role: "Senior Product Manager"
   },
-  heroImage: "https://images.unsplash.com/photo-1748256622734-92241ae7b43f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NTkxMTcwNDB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+  heroImage: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2850&q=80",
   content: {
     sections: [
       {
         paragraphs: [
-          "For most non-tech enterprises, project intake is a painful mess of scattered emails, impromptu hallway conversations, and static forms that capture just enough information to create more questions. Product managers and PMO leaders spend countless hours chasing down stakeholders for missing details, conducting follow-up meetings to understand requirements, and manually documenting everything before work can even begin.",
-          "The cost isn't just time—it's strategic clarity. When intake is ad-hoc, prioritization becomes political rather than data-driven. The loudest voice wins, not necessarily the highest-impact project."
+          "If your team still manages requests through ad-hoc intake—emails, Slack messages, spreadsheets—you’ve likely felt the pain: endless back-and-forth, missing details, and priorities that slip through the cracks. These fragmented processes create chaos, bottlenecks, and delays that ripple across the business.",
+          "Leading PMOs, IT teams, and operations groups are moving beyond this chaos by implementing AI-driven intake pipelines. These pipelines capture complete requirements at the source, intelligently classify and route requests, and ensure every project enters your backlog with context, priority, and accountability."
         ]
       },
       {
-        heading: "The Traditional Intake Problem",
+        heading: "Why Ad-Hoc Intake Fails",
         paragraphs: [
-          "Most organizations have tried to solve this with static intake forms. Fill out these 20 fields, submit, and wait. But static forms have fundamental limitations:"
-        ],
+          "Ad-hoc intake relies on scattered communication channels—emails, chats, spreadsheets—that provide no single source of truth. The result is duplicated work, lost visibility, and projects that stall before they start.",
+          "Without a standardized intake process, teams struggle with misalignment, unclear ownership, and constant firefighting. Delays pile up, stakeholders lose confidence, and strategic initiatives get stuck behind the noise."
+        ]
+      },
+      {
+        heading: "What Is an AI-Driven Intake Pipeline?",
+        paragraphs: [
+          "An AI-driven intake pipeline is a structured workflow powered by automation and machine learning. Instead of collecting requests informally, teams use standardized intake forms or embedded request portals that feed into an intelligent triage system.",
+          "Key components include ingestion interfaces, NLP classification, automated routing, prioritization frameworks, SLA tracking, and integrations with tools like Jira, Asana, or ServiceNow. Unlike static forms, AI-driven systems adapt to context, ask clarifying questions, and ensure complete, high-quality submissions."
+        ]
+      },
+      {
+        heading: "The Benefits of Moving to AI Pipelines",
         list: {
           items: [
-            "They can't adapt to different request types. A construction safety upgrade needs different information than a clinical system enhancement.",
-            "They miss context. Without follow-up questions, you get surface-level answers that lead to endless clarification cycles.",
-            "They create bottlenecks. Someone still needs to review, ask follow-ups, document, and prioritize—all manually.",
-            "They frustrate requestors. Non-technical stakeholders don't speak the language of user stories and acceptance criteria."
+            "Faster triage with NLP-based classification and routing",
+            "Reduced manual overhead and fewer misrouted requests",
+            "Improved visibility and transparency across stakeholders",
+            "Built-in prioritization using frameworks like RICE or WSJF",
+            "Higher throughput with clear SLAs and dashboards"
           ]
         }
       },
       {
-        heading: "The AI-Driven Alternative",
-        paragraphs: [
-          "AI-powered intake fundamentally changes this dynamic. Instead of static forms, imagine conversational surveys that adapt in real-time based on responses. When a stakeholder mentions regulatory requirements, the AI asks about specific compliance frameworks. When they describe operational impact, it probes for affected systems and user groups.",
-          "This adaptive approach captures complete context the first time, eliminating the follow-up meeting tax that drains PM calendars."
-        ],
-        quote: "We went from spending 3-5 hours per intake request to having complete briefs generated in minutes. The AI asks better questions than we were asking in follow-ups."
+        heading: "Core Building Blocks",
+        list: {
+          items: [
+            "Intake request forms or embedded interfaces for easy submission",
+            "NLP-driven classification to auto-tag categories and extract metadata",
+            "Routing logic combining rule-based workflows and machine learning",
+            "Automated prioritization with scoring models and thresholds",
+            "Status tracking, SLA dashboards, and stakeholder notifications",
+            "Seamless integrations with Jira, Azure DevOps, Asana, or CRM tools"
+          ]
+        }
       },
       {
-        heading: "From Conversation to Structured Output",
+        heading: "Implementation Best Practices",
         paragraphs: [
-          "But the magic isn't just in capturing information—it's in what happens next. AI can take that conversational input and automatically generate:",
-          "Standardized project briefs with all the details your team needs. Complete requirement documentation without manual transcription. Pre-scored prioritization using frameworks like RICE, WSJF, or MoSCoW. Structured work items ready to push to Jira or your project management tool.",
-          "This transformation from unstructured conversation to structured, actionable output is what makes AI-driven intake fundamentally different from traditional approaches."
+          "Start with an audit of current intake channels. Identify the most common request types and the metadata your team needs to move projects forward.",
+          "Define standard fields—such as priority, department, or dependencies—that should be captured every time.",
+          "Pilot the pipeline with a single use case, like IT helpdesk tickets or marketing campaign requests. Train classification models with real-world data and refine your rules over time.",
+          "Iterate continuously using throughput, error rates, and turnaround time as your guiding metrics."
         ]
       },
       {
-        heading: "Implementation Patterns That Work",
+        heading: "Challenges to Watch Out For",
         paragraphs: [
-          "Leading PMOs implementing AI-driven intake follow a consistent pattern. They start with their highest-volume request type—often infrastructure improvements or operational changes—and create an adaptive intake flow for just that use case.",
-          "The AI learns their specific terminology, compliance requirements, and prioritization criteria. As confidence builds, they expand to other request types, building a library of intelligent intake flows that handle everything from capital projects to system enhancements.",
-          "Within 90 days, most see dramatic improvements in both speed and completeness of intake documentation."
+          "Like any automation, AI-driven pipelines face challenges. NLP models can misclassify edge cases, and ambiguous requests may still need human review.",
+          "Cultural adoption can also be a hurdle—teams accustomed to sending quick Slack messages may resist structured intake at first.",
+          "To mitigate these issues, balance automation with human oversight, ensure transparency in how decisions are made, and communicate clearly about the benefits of standardization."
         ]
       },
       {
-        heading: "The Strategic Impact",
+        heading: "Before and After: A Real-World Example",
         paragraphs: [
-          "The impact extends beyond operational efficiency. When every request is captured with complete context and scored consistently, prioritization becomes transparent and data-driven. Stakeholders understand why their request is or isn't being prioritized. Executives get a clear view of demand across the portfolio.",
-          "Instead of managing intake chaos, product leaders can focus on strategic decisions: which initiatives truly drive business value, where capacity should be allocated, and how to communicate the roadmap with confidence.",
-          "AI-driven intake isn't about replacing PMs—it's about giving them back the time to do strategic work instead of administrative follow-up."
+          "Consider a marketing department drowning in ad-hoc campaign requests. Before AI, intake was scattered across emails and chats, leading to duplicate campaigns, unclear ownership, and delays.",
+          "After implementing an AI-driven intake pipeline, campaign briefs are submitted via a simple form, classified automatically, and routed to the right team. Prioritization scores ensure that high-value campaigns move forward quickly, while stakeholders track progress in real time. The result: triage time drops from days to hours, and campaign execution stays aligned with strategic priorities."
+        ]
+      },
+      {
+        heading: "How to Get Started",
+        paragraphs: [
+          "The fastest path is a phased rollout. Begin with one department or request type, define success metrics, and scale gradually.",
+          "Monitor key indicators like request throughput, triage time, and misclassification rates. Use these insights to fine-tune your pipeline before expanding organization-wide.",
+          "Ready to see the impact firsthand? Try our beta and experience how an AI intake pipeline can transform your request management process."
+        ]
+      },
+      {
+        paragraphs: [
+          "AI-driven intake pipelines don’t just save time—they create alignment, transparency, and a foundation for scaling your organization’s operations. By moving from chaos to control, your team can focus less on firefighting and more on delivering strategic value.",
+          "👉 Start building your AI-driven intake pipeline today and future-proof your intake process."
         ]
       }
     ]
   },
   relatedArticles: [
     {
-      title: "RICE vs WSJF vs MoSCoW: choosing a prioritization model",
+      title: "RICE vs WSJF vs MoSCoW: Choosing a Prioritization Model",
       category: "Framework Guide",
       readTime: "8 min read"
     },
     {
-      title: "From brief to backlog: automating epic creation in Jira",
+      title: "From Brief to Backlog: Automating Epic Creation in Jira",
       category: "Technical",
       readTime: "6 min read"
-    },
-    {
-      title: "Building intake workflows for construction enterprises",
-      category: "Industry Guide",
-      readTime: "7 min read"
     }
   ]
 };

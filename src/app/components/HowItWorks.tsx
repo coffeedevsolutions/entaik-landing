@@ -30,26 +30,43 @@ export function HowItWorks() {
             </p>
           </div>
   
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-            {steps.map((step, index) => (
-              <div key={index} className="relative">
-                {/* Connector Line (hidden on mobile) */}
-                {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-20 left-1/2 w-full h-0.5 bg-gradient-to-r from-border to-border/50" />
-                )}
-                
-                <div className="relative space-y-6">
-                  <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${step.gradient} text-white shadow-lg`}>
-                    <span className="text-2xl font-semibold">{step.number}</span>
-                  </div>
-                  
-                  <div className="space-y-3">
-                    <h3 className="text-2xl">{step.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{step.description}</p>
+          <div className="relative">
+            {/* Desktop connector line */}
+            <div className="hidden md:block absolute top-10 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-border to-transparent" />
+            
+            <div className="grid md:grid-cols-3 gap-8 lg:gap-12 relative">
+              {steps.map((step, index) => (
+                <div key={index} className="relative">
+                  <div className="flex flex-col items-center text-center space-y-6">
+                    {/* Number Circle with enhanced styling */}
+                    <div className="relative">
+                      <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${step.gradient} text-white shadow-lg flex items-center justify-center relative z-10`}>
+                        <span className="text-2xl font-bold">{step.number}</span>
+                      </div>
+                      {/* Glow effect */}
+                      <div className={`absolute inset-0 w-20 h-20 rounded-2xl bg-gradient-to-br ${step.gradient} opacity-20 blur-xl`} />
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="space-y-4 max-w-sm">
+                      <h3 className="text-xl lg:text-2xl font-semibold">{step.title}</h3>
+                      <p className="text-muted-foreground leading-relaxed text-sm lg:text-base">{step.description}</p>
+                    </div>
+                    
+                    {/* Mobile connector arrow */}
+                    {index < steps.length - 1 && (
+                      <div className="md:hidden flex justify-center mt-8 mb-4">
+                        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                          <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                          </svg>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>

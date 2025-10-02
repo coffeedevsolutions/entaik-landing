@@ -7,7 +7,7 @@ Disallow: /admin/
 Disallow: /private/
 
 # Host
-Host: https://intakeflow.ai
+Host: https://uptaik.com
 
 # Sitemaps
-Sitemap: https://intakeflow.ai/sitemap.xml
+Sitemap: https://uptaik.com/sitemap.xml
