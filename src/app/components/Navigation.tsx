@@ -5,6 +5,7 @@ import { Menu } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
+import Image from "next/image";
 
 interface NavigationProps {
   onNavigate?: (view: string, postId?: string) => void;
@@ -67,8 +68,16 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
             onClick={handleLogoClick}
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg" />
-            <span className="font-semibold">IntakeAI</span>
+            <div className="relative w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <Image
+                src="/images/uptaik-logo-2-white.png"
+                alt="Uptaik Logo"
+                width={28}
+                height={28}
+                className="relative z-10"
+              />
+            </div>
+            <span className="font-semibold">Uptaik</span>
           </button>
 
           {/* Desktop Navigation */}
@@ -119,7 +128,6 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
           </div>
 
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="ghost">Sign In</Button>
             <Button onClick={() => actualCurrentView === "home" ? scrollToSection("waitlist") : handleNavigation("home", "waitlist")}>
               Join Beta
             </Button>

@@ -1,4 +1,5 @@
 import { Navigation } from "./Navigation";
+import { HeroHeader } from "./HeroHeader";
 import { Hero } from "./Hero";
 import { ProblemSolution } from "./ProblemSolution";
 import { Features } from "./Features";
@@ -16,6 +17,7 @@ export default function App() {
       <Navigation />
       
       <main>
+        <HeroHeader />
         <Hero />
         
         <ProblemSolution />

@@ -3,6 +3,7 @@
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { Play } from "lucide-react";
+import Image from "next/image";
 
 export function Hero() {
   const scrollToWaitlist = () => {
@@ -17,7 +18,7 @@ export function Hero() {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 opacity-50" />
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 lg:pt-12 lg:pb-32">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Content */}
           <div className="space-y-8">
@@ -50,14 +51,18 @@ export function Hero() {
             </p>
           </div>
 
-          {/* Right Column - Placeholder */}
+          {/* Right Column - Dashboard Mockup */}
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl blur-3xl opacity-20" />
-            <div className="relative w-full h-96 bg-gray-300 rounded-2xl shadow-2xl border border-gray-200 flex items-center justify-center">
-              <div className="text-gray-500 text-center">
-                <div className="text-4xl mb-2">📊</div>
-                <p className="text-sm">Dashboard Preview</p>
-              </div>
+            <div className="relative rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
+              <Image
+                src="/images/screenshot-mockup-2.png"
+                alt="IntakeFlow AI dashboard mockup showing project intake interface"
+                width={800}
+                height={600}
+                className="w-full h-auto"
+                priority
+              />
             </div>
           </div>
         </div>
