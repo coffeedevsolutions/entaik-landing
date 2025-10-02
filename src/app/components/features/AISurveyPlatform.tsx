@@ -4,6 +4,7 @@ import { Card } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { IntakeSamples } from "../intake-flows/IntakeSamples";
 import { 
   Brain, 
   Sparkles, 
@@ -209,6 +210,11 @@ export function AISurveyPlatform({ onNavigate }: AISurveyPlatformProps) {
               </>
             )}
           </div>
+        </div>
+
+        {/* Intake Flow Samples */}
+        <div className="mb-20">
+          <IntakeSamples />
         </div>
 
         {/* Feature Grid */}

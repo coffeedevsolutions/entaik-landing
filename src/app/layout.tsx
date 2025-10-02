@@ -94,7 +94,7 @@ export default function RootLayout({
         <Analytics />
         <Script
           src="https://js.hsforms.net/forms/embed/44587597.js"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
       </body>
     </html>
