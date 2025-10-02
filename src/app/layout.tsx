@@ -92,10 +92,26 @@ export default function RootLayout({
       >
         {children}
         <Analytics />
+        
+        {/* HubSpot Forms */}
         <Script
           src="https://js.hsforms.net/forms/embed/44587597.js"
           strategy="afterInteractive"
         />
+        
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-CBM5HM6PDG"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-CBM5HM6PDG');
+          `}
+        </Script>
       </body>
     </html>
   );

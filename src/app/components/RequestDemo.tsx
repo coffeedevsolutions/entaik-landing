@@ -1,3 +1,5 @@
+"use client";
+
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
@@ -8,7 +10,7 @@ import { Calendar, Clock, Users, Building, CheckCircle } from "lucide-react";
 import { useState } from "react";
 
 interface RequestDemoProps {
-  onNavigate: (view: string) => void;
+  onNavigate?: (view: string) => void;
 }
 
 export function RequestDemo({ onNavigate }: RequestDemoProps) {
@@ -34,7 +36,7 @@ export function RequestDemo({ onNavigate }: RequestDemoProps) {
             <div className="pt-6">
               <Button 
                 size="lg"
-                onClick={() => onNavigate("home")}
+                onClick={() => onNavigate?.("home")}
               >
                 Return to Home
               </Button>

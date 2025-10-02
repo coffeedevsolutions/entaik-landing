@@ -1,10 +1,12 @@
+"use client";
+
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { ArrowRight, Workflow, Users, Building, Heart, Zap, FileText } from "lucide-react";
 
 interface WorkflowsProps {
-  onNavigate: (view: string) => void;
+  onNavigate?: (view: string) => void;
 }
 
 const workflows = [
@@ -132,7 +134,7 @@ export function Workflows({ onNavigate }: WorkflowsProps) {
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-                onClick={() => onNavigate("request-demo")}
+                onClick={() => onNavigate?.("request-demo")}
               >
                 Request a Demo
               </Button>

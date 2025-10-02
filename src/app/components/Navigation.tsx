@@ -174,42 +174,45 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
               onMouseEnter={() => handleMouseEnter("workflows")}
               onMouseLeave={handleMouseLeave}
             >
+              <Link href="/workflows">
+                <button 
+                  className={`px-3 py-2 rounded-lg flex items-center gap-1 transition-colors ${
+                    activeDropdown === "workflows" || pathname === "/workflows"
+                      ? "bg-accent text-foreground" 
+                      : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
+                  }`}
+                >
+                  <span>Workflows</span>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+              </Link>
+            </div>
+
+            {/* Pricing */}
+            <Link href="/pricing">
               <button 
-                onClick={() => handleNavigation("workflows")}
-                className={`px-3 py-2 rounded-lg flex items-center gap-1 transition-colors ${
-                  activeDropdown === "workflows" || actualCurrentView === "workflows"
+                className={`px-3 py-2 rounded-lg transition-colors cursor-pointer ${
+                  pathname === "/pricing"
                     ? "bg-accent text-foreground" 
                     : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
                 }`}
               >
-                <span>Workflows</span>
-                <ChevronDown className="w-4 h-4" />
+                Pricing
               </button>
-            </div>
-
-            {/* Pricing */}
-            <button 
-              onClick={() => handleNavigation("pricing")}
-              className={`px-3 py-2 rounded-lg transition-colors cursor-pointer ${
-                actualCurrentView === "pricing"
-                  ? "bg-accent text-foreground" 
-                  : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
-              }`}
-            >
-              Pricing
-            </button>
+            </Link>
 
             {/* Request Demo */}
-            <button 
-              onClick={() => handleNavigation("request-demo")}
-              className={`px-3 py-2 rounded-lg transition-colors cursor-pointer ${
-                actualCurrentView === "request-demo"
-                  ? "bg-accent text-foreground" 
-                  : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
-              }`}
-            >
-              Request Demo
-            </button>
+            <Link href="/request-demo">
+              <button 
+                className={`px-3 py-2 rounded-lg transition-colors cursor-pointer ${
+                  pathname === "/request-demo"
+                    ? "bg-accent text-foreground" 
+                    : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
+                }`}
+              >
+                Request Demo
+              </button>
+            </Link>
 
             {/* Blog - Always use Next.js routing for blog */}
             <Link 
@@ -401,8 +404,8 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="grid grid-cols-3 gap-6">
-              <button
-                onClick={() => handleNavigation("workflows")}
+              <Link
+                href="/workflows"
                 className="flex items-start gap-3 p-4 rounded-lg hover:bg-accent transition-colors text-left group"
               >
                 <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-200 transition-colors">
@@ -412,10 +415,10 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
                   <div className="font-medium group-hover:text-blue-600 transition-colors">PMO Project Intake</div>
                   <div className="text-sm text-muted-foreground">Capture and prioritize project requests</div>
                 </div>
-              </button>
+              </Link>
 
-              <button
-                onClick={() => handleNavigation("workflows")}
+              <Link
+                href="/workflows"
                 className="flex items-start gap-3 p-4 rounded-lg hover:bg-accent transition-colors text-left group"
               >
                 <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center flex-shrink-0 group-hover:bg-purple-200 transition-colors">
@@ -425,10 +428,10 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
                   <div className="font-medium group-hover:text-purple-600 transition-colors">IT Service Requests</div>
                   <div className="text-sm text-muted-foreground">Streamline infrastructure requests</div>
                 </div>
-              </button>
+              </Link>
 
-              <button
-                onClick={() => handleNavigation("workflows")}
+              <Link
+                href="/workflows"
                 className="flex items-start gap-3 p-4 rounded-lg hover:bg-accent transition-colors text-left group"
               >
                 <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0 group-hover:bg-green-200 transition-colors">
@@ -438,10 +441,10 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
                   <div className="font-medium group-hover:text-green-600 transition-colors">Capital Projects</div>
                   <div className="text-sm text-muted-foreground">Construction and facilities planning</div>
                 </div>
-              </button>
+              </Link>
 
-              <button
-                onClick={() => handleNavigation("workflows")}
+              <Link
+                href="/workflows"
                 className="flex items-start gap-3 p-4 rounded-lg hover:bg-accent transition-colors text-left group"
               >
                 <div className="w-10 h-10 rounded-lg bg-pink-100 flex items-center justify-center flex-shrink-0 group-hover:bg-pink-200 transition-colors">
@@ -451,10 +454,10 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
                   <div className="font-medium group-hover:text-pink-600 transition-colors">Clinical Enhancements</div>
                   <div className="text-sm text-muted-foreground">Healthcare system improvements</div>
                 </div>
-              </button>
+              </Link>
 
-              <button
-                onClick={() => handleNavigation("workflows")}
+              <Link
+                href="/workflows"
                 className="flex items-start gap-3 p-4 rounded-lg hover:bg-accent transition-colors text-left group col-span-2"
               >
                 <div className="w-10 h-10 rounded-lg bg-orange-100 flex items-center justify-center flex-shrink-0 group-hover:bg-orange-200 transition-colors">
@@ -464,7 +467,7 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
                   <div className="font-medium group-hover:text-orange-600 transition-colors">View All Workflows</div>
                   <div className="text-sm text-muted-foreground">Explore pre-built templates for every industry and use case</div>
                 </div>
-              </button>
+              </Link>
             </div>
           </div>
         </div>

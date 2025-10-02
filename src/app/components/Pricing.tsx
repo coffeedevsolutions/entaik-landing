@@ -1,10 +1,12 @@
+"use client";
+
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Check, Sparkles } from "lucide-react";
 
 interface PricingProps {
-  onNavigate: (view: string) => void;
+  onNavigate?: (view: string) => void;
 }
 
 const plans = [
@@ -131,7 +133,7 @@ export function Pricing({ onNavigate }: PricingProps) {
                 <Button 
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700' : ''}`}
                   variant={plan.popular ? "default" : "outline"}
-                  onClick={() => plan.cta === "Contact Sales" ? onNavigate("request-demo") : null}
+                  onClick={() => plan.cta === "Contact Sales" ? onNavigate?.("request-demo") : null}
                 >
                   {plan.cta}
                 </Button>
@@ -220,7 +222,7 @@ export function Pricing({ onNavigate }: PricingProps) {
               <Button 
                 size="lg" 
                 variant="outline"
-                onClick={() => onNavigate("request-demo")}
+                onClick={() => onNavigate?.("request-demo")}
               >
                 Request a Demo
               </Button>
