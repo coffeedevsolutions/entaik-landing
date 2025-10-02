@@ -1,8 +1,15 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { CheckCircle2 } from "lucide-react";
 
 export function WaitlistForm() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <section id="waitlist" className="py-20 lg:py-32 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,12 +40,14 @@ export function WaitlistForm() {
 
           {/* Right - HubSpot Form */}
           <div className="bg-background rounded-2xl shadow-xl p-8 border border-border">
-            <div 
-              className="hs-form-frame" 
-              data-region="na1" 
-              data-form-id="4b20c0a6-4f41-4413-ae67-8c592f28cfae" 
-              data-portal-id="44587597"
-            ></div>
+            {mounted && (
+              <div 
+                className="hs-form-frame min-h-[400px]" 
+                data-region="na1" 
+                data-form-id="4b20c0a6-4f41-4413-ae67-8c592f28cfae" 
+                data-portal-id="44587597"
+              ></div>
+            )}
           </div>
         </div>
       </div>

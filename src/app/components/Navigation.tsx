@@ -230,6 +230,7 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
           {/* Right Actions */}
           <div className="hidden lg:flex items-center gap-3">
             <Button 
+                className="cursor-pointer"
                 variant="ghost"
                 onClick={() => handleNavigation("home", "waitlist")}
             >
@@ -237,7 +238,7 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
             </Button>
             <Button 
               onClick={() => handleNavigation("request-demo")}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 cursor-pointer"
             >
               Request Demo
             </Button>
@@ -384,7 +385,7 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
 
                 <Link
                   href="/blog"
-                  className="text-sm text-blue-600 hover:text-blue-700 flex items-center gap-1 group"
+                  className="text-sm text-blue-600 hover:text-blue-700 flex items-center gap-1 group cursor-pointer"
                 >
                   <span>View all articles</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

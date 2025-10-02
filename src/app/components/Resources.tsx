@@ -76,7 +76,7 @@ export function Resources() {
             <Button 
               variant="outline" 
               size="lg" 
-              className="gap-2"
+              className="gap-2 cursor-pointer"
             >
               View All Articles
               <ArrowRight className="w-4 h-4" />

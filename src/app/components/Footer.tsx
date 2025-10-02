@@ -32,10 +32,10 @@ export function Footer() {
           <div className="space-y-4">
             <h4 className="font-semibold">Product</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#features" className="hover:text-foreground transition-colors">Features</a></li>
-              <li><a href="#how-it-works" className="hover:text-foreground transition-colors">How It Works</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Pricing</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Roadmap</a></li>
+              <li><a href="/features/ai-survey-platform" className="hover:text-foreground transition-colors">Features</a></li>
+              <li><a href="/workflows" className="hover:text-foreground transition-colors">Workflows</a></li>
+              <li><a href="/pricing" className="hover:text-foreground transition-colors">Pricing</a></li>
+              <li><a href="/request-demo" className="hover:text-foreground transition-colors">Request a Demo</a></li>
             </ul>
           </div>
 
@@ -43,15 +43,14 @@ export function Footer() {
           <div className="space-y-4">
             <h4 className="font-semibold">Company</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-foreground transition-colors">About</a></li>
+              {/* <li><a href="#" className="hover:text-foreground transition-colors">About</a></li> */}
               <li><Link href="/blog" className="hover:text-foreground transition-colors">Blog</Link></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Contact</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Careers</a></li>
+              <li><a href="/request-demo" className="hover:text-foreground transition-colors">Contact</a></li>
             </ul>
           </div>
 
           {/* Legal */}
-          <div className="space-y-4">
+          {/* <div className="space-y-4">
             <h4 className="font-semibold">Legal</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a></li>
@@ -59,7 +58,7 @@ export function Footer() {
               <li><a href="#" className="hover:text-foreground transition-colors">Security</a></li>
               <li><a href="#" className="hover:text-foreground transition-colors">Compliance</a></li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom Bar */}
@@ -69,7 +68,7 @@ export function Footer() {
           </p>
           
           <div className="flex items-center gap-4">
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+            {/* <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
               <Twitter className="w-5 h-5" />
             </a>
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -77,7 +76,7 @@ export function Footer() {
             </a>
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
               <Github className="w-5 h-5" />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
