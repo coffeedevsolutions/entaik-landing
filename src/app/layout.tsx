@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://uptaik.com'),
+  metadataBase: new URL('https://www.uptaik.com'),
   title: "Uptaik — AI-Powered Project Intake & Prioritization",
   description:
     "Consolidate project requests with adaptive AI surveys. Generate project briefs, prioritize requests, and auto-create Jira epics. Perfect for construction, utilities, healthcare, and non-tech enterprises.",
@@ -37,6 +37,28 @@ export const metadata: Metadata = {
   authors: [{ name: "Uptaik Team" }],
   creator: "Uptaik",
   publisher: "Uptaik",
+
+  // Favicons & app icons
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: ["/favicon.ico"],
+    other: [
+      // For Safari pinned tabs
+      { rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#6366f1" },
+    ],
+  },
+
+  // PWA manifest (Chrome uses these for installed icons)
+  manifest: "/site.webmanifest",
+
+  // Android UI color
+  themeColor: "#ffffff",
+
   robots: {
     index: true,
     follow: true,
@@ -51,7 +73,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://uptaik.com",
+    url: "https://www.uptaik.com",
     siteName: "Uptaik",
     title: "Uptaik — AI-Powered Project Intake & Prioritization",
     description:
@@ -74,7 +96,7 @@ export const metadata: Metadata = {
     creator: "@uptaik",
   },
   alternates: {
-    canonical: "https://uptaik.com",
+    canonical: "https://www.uptaik.com",
   },
   verification: {
     google: "your-google-site-verification-code",
@@ -94,6 +116,21 @@ export default function RootLayout({
         {children}
         <Analytics />
         <SpeedInsights />
+        
+        {/* Organization Schema - Brand Logo for Google */}
+        <Script id="org-schema" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Uptaik",
+            "url": "https://www.uptaik.com",
+            "logo": "https://www.uptaik.com/logo.png",
+            "sameAs": [
+              "https://www.linkedin.com/company/uptaik",
+              "https://x.com/uptaik"
+            ]
+          })}
+        </Script>
         
         {/* HubSpot Forms */}
         <Script
