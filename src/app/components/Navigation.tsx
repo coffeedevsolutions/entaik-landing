@@ -150,20 +150,20 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
-            {/* Uptaik Dropdown */}
+            {/* Features Dropdown */}
             <div 
               className="relative"
-              onMouseEnter={() => handleMouseEnter("uptaik")}
+              onMouseEnter={() => handleMouseEnter("features")}
               onMouseLeave={handleMouseLeave}
             >
               <button 
                 className={`px-3 py-2 rounded-lg flex items-center gap-1 transition-colors ${
-                  activeDropdown === "uptaik" || actualCurrentView === "home" 
+                  activeDropdown === "features" || (actualCurrentView === "home" && pathname === "/") 
                     ? "bg-accent text-foreground" 
                     : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
                 }`}
               >
-                <span>Uptaik</span>
+                <span>Features</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
             </div>
@@ -232,15 +232,15 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
             <Button 
                 className="cursor-pointer"
                 variant="ghost"
-                onClick={() => handleNavigation("home", "waitlist")}
-            >
-                Join the Beta
+                onClick={() => handleNavigation("request-demo")}
+                >
+                Request Demo
             </Button>
             <Button 
-              onClick={() => handleNavigation("request-demo")}
+              onClick={() => handleNavigation("home", "waitlist")}
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 cursor-pointer"
             >
-              Request Demo
+              Join the Beta
             </Button>
           </div>
 
@@ -286,10 +286,10 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
       </div>
 
       {/* Mega Dropdowns */}
-      {activeDropdown === "uptaik" && (
+      {activeDropdown === "features" && (
         <div 
           className="absolute left-0 right-0 top-full bg-background border-b border-border shadow-xl"
-          onMouseEnter={() => handleMouseEnter("uptaik")}
+          onMouseEnter={() => handleMouseEnter("features")}
           onMouseLeave={handleMouseLeave}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -404,71 +404,138 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
           onMouseLeave={handleMouseLeave}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div className="grid grid-cols-3 gap-6">
-              <Link
-                href="/workflows"
-                className="flex items-start gap-3 p-4 rounded-lg hover:bg-accent transition-colors text-left group"
-              >
-                <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-200 transition-colors">
-                  <Workflow className="w-5 h-5 text-blue-600" />
+            <div className="grid grid-cols-12 gap-6">
+              {/* Left Column - Categories */}
+              <div className="col-span-5 space-y-3">
+                <div className="space-y-2 mb-4">
+                  <h3 className="font-medium text-gray-600">Browse by Category</h3>
                 </div>
-                <div className="space-y-1">
-                  <div className="font-medium group-hover:text-blue-600 transition-colors">PMO Project Intake</div>
-                  <div className="text-sm text-muted-foreground">Capture and prioritize project requests</div>
-                </div>
-              </Link>
 
-              <Link
-                href="/workflows"
-                className="flex items-start gap-3 p-4 rounded-lg hover:bg-accent transition-colors text-left group"
-              >
-                <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center flex-shrink-0 group-hover:bg-purple-200 transition-colors">
-                  <Zap className="w-5 h-5 text-purple-600" />
-                </div>
-                <div className="space-y-1">
-                  <div className="font-medium group-hover:text-purple-600 transition-colors">IT Service Requests</div>
-                  <div className="text-sm text-muted-foreground">Streamline infrastructure requests</div>
-                </div>
-              </Link>
+                <Link
+                  href="/workflows?category=IT Operations"
+                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent transition-colors text-left group"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-200 transition-colors">
+                    <Zap className="w-5 h-5 text-blue-600" />
+                  </div>
+                  <div className="space-y-1">
+                    <div className="font-medium group-hover:text-blue-600 transition-colors">IT Operations</div>
+                    <div className="text-sm text-muted-foreground">Technical requests & incident response</div>
+                  </div>
+                </Link>
 
-              <Link
-                href="/workflows"
-                className="flex items-start gap-3 p-4 rounded-lg hover:bg-accent transition-colors text-left group"
-              >
-                <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0 group-hover:bg-green-200 transition-colors">
-                  <Building className="w-5 h-5 text-green-600" />
-                </div>
-                <div className="space-y-1">
-                  <div className="font-medium group-hover:text-green-600 transition-colors">Capital Projects</div>
-                  <div className="text-sm text-muted-foreground">Construction and facilities planning</div>
-                </div>
-              </Link>
+                <Link
+                  href="/workflows?category=Product Management"
+                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent transition-colors text-left group"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center flex-shrink-0 group-hover:bg-purple-200 transition-colors">
+                    <Sparkles className="w-5 h-5 text-purple-600" />
+                  </div>
+                  <div className="space-y-1">
+                    <div className="font-medium group-hover:text-purple-600 transition-colors">Product Management</div>
+                    <div className="text-sm text-muted-foreground">Feature requests & roadmapping</div>
+                  </div>
+                </Link>
 
-              <Link
-                href="/workflows"
-                className="flex items-start gap-3 p-4 rounded-lg hover:bg-accent transition-colors text-left group"
-              >
-                <div className="w-10 h-10 rounded-lg bg-pink-100 flex items-center justify-center flex-shrink-0 group-hover:bg-pink-200 transition-colors">
-                  <Heart className="w-5 h-5 text-pink-600" />
-                </div>
-                <div className="space-y-1">
-                  <div className="font-medium group-hover:text-pink-600 transition-colors">Clinical Enhancements</div>
-                  <div className="text-sm text-muted-foreground">Healthcare system improvements</div>
-                </div>
-              </Link>
+                <Link
+                  href="/workflows?category=Healthcare"
+                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent transition-colors text-left group"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-pink-100 flex items-center justify-center flex-shrink-0 group-hover:bg-pink-200 transition-colors">
+                    <Heart className="w-5 h-5 text-pink-600" />
+                  </div>
+                  <div className="space-y-1">
+                    <div className="font-medium group-hover:text-pink-600 transition-colors">Healthcare</div>
+                    <div className="text-sm text-muted-foreground">Patient experience & feedback</div>
+                  </div>
+                </Link>
 
-              <Link
-                href="/workflows"
-                className="flex items-start gap-3 p-4 rounded-lg hover:bg-accent transition-colors text-left group col-span-2"
-              >
-                <div className="w-10 h-10 rounded-lg bg-orange-100 flex items-center justify-center flex-shrink-0 group-hover:bg-orange-200 transition-colors">
-                  <Sparkles className="w-5 h-5 text-orange-600" />
+                <Link
+                  href="/workflows?category=Finance & Insurance"
+                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent transition-colors text-left group"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center flex-shrink-0 group-hover:bg-amber-200 transition-colors">
+                    <Shield className="w-5 h-5 text-amber-600" />
+                  </div>
+                  <div className="space-y-1">
+                    <div className="font-medium group-hover:text-amber-600 transition-colors">Finance & Insurance</div>
+                    <div className="text-sm text-muted-foreground">Claims intake & processing</div>
+                  </div>
+                </Link>
+              </div>
+
+              {/* Right Column - More Categories */}
+              <div className="col-span-5 space-y-3">
+                <div className="space-y-2 mb-4">
+                  <h3 className="font-medium text-gray-600 invisible">More</h3>
                 </div>
-                <div className="space-y-1">
-                  <div className="font-medium group-hover:text-orange-600 transition-colors">View All Workflows</div>
-                  <div className="text-sm text-muted-foreground">Explore pre-built templates for every industry and use case</div>
-                </div>
-              </Link>
+
+                <Link
+                  href="/workflows?category=Retail & E-Commerce"
+                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent transition-colors text-left group"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-rose-100 flex items-center justify-center flex-shrink-0 group-hover:bg-rose-200 transition-colors">
+                    <Building className="w-5 h-5 text-rose-600" />
+                  </div>
+                  <div className="space-y-1">
+                    <div className="font-medium group-hover:text-rose-600 transition-colors">Retail & E-Commerce</div>
+                    <div className="text-sm text-muted-foreground">Returns & product feedback</div>
+                  </div>
+                </Link>
+
+                <Link
+                  href="/workflows?category=Education"
+                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent transition-colors text-left group"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-sky-100 flex items-center justify-center flex-shrink-0 group-hover:bg-sky-200 transition-colors">
+                    <BookOpen className="w-5 h-5 text-sky-600" />
+                  </div>
+                  <div className="space-y-1">
+                    <div className="font-medium group-hover:text-sky-600 transition-colors">Education</div>
+                    <div className="text-sm text-muted-foreground">Course feedback & evaluation</div>
+                  </div>
+                </Link>
+
+                <Link
+                  href="/workflows?category=Legal & Professional Services"
+                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent transition-colors text-left group"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center flex-shrink-0 group-hover:bg-indigo-200 transition-colors">
+                    <Shield className="w-5 h-5 text-indigo-600" />
+                  </div>
+                  <div className="space-y-1">
+                    <div className="font-medium group-hover:text-indigo-600 transition-colors">Legal & Professional</div>
+                    <div className="text-sm text-muted-foreground">Client onboarding workflows</div>
+                  </div>
+                </Link>
+
+                <Link
+                  href="/workflows?category=Internal Operations"
+                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent transition-colors text-left group"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0 group-hover:bg-gray-200 transition-colors">
+                    <Workflow className="w-5 h-5 text-gray-600" />
+                  </div>
+                  <div className="space-y-1">
+                    <div className="font-medium group-hover:text-gray-600 transition-colors">Internal Operations</div>
+                    <div className="text-sm text-muted-foreground">IT/HR ticketing & requests</div>
+                  </div>
+                </Link>
+              </div>
+
+              {/* CTA Column */}
+              <div className="col-span-2 flex items-center">
+                <Link
+                  href="/workflows"
+                  className="flex flex-col items-center justify-center p-4 rounded-lg hover:bg-accent transition-colors text-center group w-full"
+                >
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                    <Sparkles className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="font-medium group-hover:text-blue-600 transition-colors mb-1">View All</div>
+                  <div className="text-xs text-muted-foreground">9 workflows</div>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

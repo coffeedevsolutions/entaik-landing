@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
@@ -10,6 +11,7 @@ import { workflowConfigs } from "./workflow-visualization/workflow-configs";
 
 interface WorkflowsProps {
   onNavigate?: (view: string) => void;
+  initialCategory?: string;
 }
 
 // Map workflow IDs to categories and icons
@@ -75,8 +77,16 @@ const workflows = Object.values(workflowConfigs).map(config => {
   };
 });
 
-export function Workflows({ onNavigate }: WorkflowsProps) {
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+export function Workflows({ onNavigate, initialCategory }: WorkflowsProps) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory || "All");
+  
+  // Update selected category when initialCategory or searchParams change
+  useEffect(() => {
+    const categoryFromUrl = searchParams.get("category") || initialCategory || "All";
+    setSelectedCategory(categoryFromUrl);
+  }, [searchParams, initialCategory]);
   
   // Extract unique categories
   const categories = ["All", ...Array.from(new Set(workflows.map(w => w.category)))];
@@ -85,6 +95,16 @@ export function Workflows({ onNavigate }: WorkflowsProps) {
   const filteredWorkflows = selectedCategory === "All" 
     ? workflows 
     : workflows.filter(w => w.category === selectedCategory);
+  
+  // Handle category selection and update URL
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+    if (category === "All") {
+      router.push("/workflows");
+    } else {
+      router.push(`/workflows?category=${encodeURIComponent(category)}`);
+    }
+  };
 
   return (
     <div className="pt-20 pb-20">
@@ -108,7 +128,7 @@ export function Workflows({ onNavigate }: WorkflowsProps) {
               {categories.map((category) => (
                 <button
                   key={category}
-                  onClick={() => setSelectedCategory(category)}
+                  onClick={() => handleCategoryChange(category)}
                   className={`px-6 py-2.5 rounded-full font-medium transition-all duration-200 ${
                     selectedCategory === category
                       ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/30"

@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { LucideIcon } from 'lucide-react';
+import Link from 'next/link';
+import { Button } from '../ui/button';
 
 export interface Benefit {
   text: string;
@@ -59,13 +61,34 @@ export function WorkflowBenefits({ benefits, accentColor = 'from-blue-500 to-pur
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-12 max-w-4xl mx-auto"
         >
-          <div className={`relative overflow-hidden bg-gradient-to-br ${accentColor} rounded-2xl p-8 shadow-2xl`}>
+          <div className={`relative overflow-hidden bg-gradient-to-br ${accentColor} rounded-2xl p-8 md:p-12 shadow-2xl`}>
             <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4xIi8+PC9nPjwvc3ZnPg==')] opacity-20" />
-            <div className="relative text-center text-white">
-              <h3 className="mb-3 text-white text-2xl font-bold">Ready to streamline your workflow?</h3>
-              <p className="text-white/90 text-base">
+            <div className="relative text-center text-white space-y-6">
+              <h3 className="text-white text-2xl md:text-3xl font-bold">Ready to streamline your workflow?</h3>
+              <p className="text-white/90 text-base md:text-lg max-w-2xl mx-auto">
                 Get started today and experience the difference in productivity and clarity.
               </p>
+              
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                <Link href="/request-demo">
+                  <Button 
+                    size="lg" 
+                    className="bg-white text-gray-900 hover:bg-gray-100 shadow-lg hover:shadow-xl transition-all cursor-pointer w-full sm:w-auto"
+                  >
+                    Request a Demo
+                  </Button>
+                </Link>
+                <Link href="/#waitlist">
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="text-white hover:bg-white/10 hover:text-white hover:scale-105 transition-transform duration-300 cursor-pointer w-full sm:w-auto"
+                  >
+                    Join the Beta
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </motion.div>
