@@ -55,6 +55,42 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     {
+      url: 'https://uptaik.com/workflows/healthcare-patient-experience',
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: 'https://uptaik.com/workflows/legal-client-onboarding',
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: 'https://uptaik.com/workflows/retail-returns-feedback',
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: 'https://uptaik.com/workflows/education-course-feedback',
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: 'https://uptaik.com/workflows/finance-claim-intake',
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: 'https://uptaik.com/workflows/internal-it-hr-ticketing',
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
       url: 'https://uptaik.com/request-demo',
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
