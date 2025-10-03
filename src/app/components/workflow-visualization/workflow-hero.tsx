@@ -47,7 +47,7 @@ export function WorkflowHero({ title, description, accentColor = 'from-blue-500 
   const colors = getColors(accentColor);
 
   return (
-    <section className={`relative overflow-hidden bg-gradient-to-br ${colors.bgGradient}`}>
+    <section className={`relative overflow-hidden bg-gradient-to-br ${colors.bgGradient} font-[family-name:var(--font-suse-mono)]`}>
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className={`absolute top-0 left-1/4 w-72 h-72 ${colors.blob1} rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob`}></div>

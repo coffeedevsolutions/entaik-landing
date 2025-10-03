@@ -36,7 +36,7 @@ export function WorkflowStepCard({ step, index, isMobile = false, isExpanded = t
       >
         <button
           onClick={onToggle}
-          className="w-full text-left bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100"
+          className="w-full text-left bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 font-[family-name:var(--font-suse-mono)]"
         >
           <div className="p-6">
             <div className="flex items-start justify-between gap-4">

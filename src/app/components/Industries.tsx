@@ -61,7 +61,7 @@ const industries = [
 
 export function Industries() {
   return (
-    <section id="industries" className="py-20 lg:py-32 bg-muted/30">
+    <section id="industries" className="py-20 lg:py-32 bg-muted/30 font-[family-name:var(--font-suse-mono)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl lg:text-4xl">Built for Non-Tech Enterprises</h2>

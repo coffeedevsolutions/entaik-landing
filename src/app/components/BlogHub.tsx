@@ -20,8 +20,8 @@ export function BlogHub({ onNavigate, blogPosts = [] }: BlogHubProps) {
   };
 
   return (
-    <div className="pt-20 pb-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="pt-20 pb-20 font-[family-name:var(--font-suse-mono)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> 
           {/* Hero Section */}
           <div className="text-center mb-16 space-y-4">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight">

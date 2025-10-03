@@ -17,7 +17,7 @@ interface WorkflowBenefitsProps {
 
 export function WorkflowBenefits({ benefits, accentColor = 'from-blue-500 to-purple-600' }: WorkflowBenefitsProps) {
   return (
-    <div className="bg-gradient-to-br from-slate-50 via-white to-blue-50/30 py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-br from-slate-50 via-white to-blue-50/30 py-16 px-4 sm:px-6 lg:px-8 font-[family-name:var(--font-suse-mono)]">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

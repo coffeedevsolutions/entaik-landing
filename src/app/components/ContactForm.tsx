@@ -13,7 +13,7 @@ export function ContactForm() {
   }, []);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 font-[family-name:var(--font-suse-mono)]">
       {/* Hero Section */}
       <div className="text-center mb-12 space-y-6 pt-12">
         <Badge className="bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 hover:bg-blue-100 border-blue-200">

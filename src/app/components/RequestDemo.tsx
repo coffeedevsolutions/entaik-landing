@@ -10,7 +10,7 @@ interface RequestDemoProps {
 
 export function RequestDemo({ onNavigate }: RequestDemoProps) {
   return (
-    <div className="pt-20 pb-20">
+    <div className="pt-20 pb-20 font-[family-name:var(--font-suse-mono)]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-12 space-y-6 pt-12">

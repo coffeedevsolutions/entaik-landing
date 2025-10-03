@@ -16,14 +16,14 @@ export function HeroHeader() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="text-center">
           {/* Main gradient text */}
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight">
+          <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight font-[family-name:var(--font-suse-mono)]">
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient-x">
               Upgrade your intake.
             </span>
           </h1>
           
           {/* Subtle subtitle */}
-          <p className="mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto font-[family-name:var(--font-suse-mono)]">
             Transform scattered requests into structured workflows with AI-powered intelligence
           </p>
           

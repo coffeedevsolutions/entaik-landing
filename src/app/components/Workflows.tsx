@@ -107,7 +107,7 @@ export function Workflows({ onNavigate, initialCategory }: WorkflowsProps) {
   };
 
   return (
-    <div className="pt-20 pb-20">
+    <div className="pt-20 pb-20 font-[family-name:var(--font-suse-mono)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
           <div className="text-center mb-16 space-y-6 pt-12">

@@ -128,7 +128,7 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border">
+    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border font-[family-name:var(--font-suse-mono)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -145,11 +145,11 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
                 className="relative z-10"
               />
             </div>
-            <span className="font-semibold">Uptaik</span>
+            <span className="font-bold text-lg">Uptaik</span>
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-1 text-lg">
             {/* Features Dropdown */}
             <div 
               className="relative"
@@ -157,7 +157,7 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
               onMouseLeave={handleMouseLeave}
             >
               <button 
-                className={`px-3 py-2 rounded-lg flex items-center gap-1 transition-colors ${
+                className={`px-3 py-2 rounded-lg flex items-center gap-1 transition-colors text-base ${
                   activeDropdown === "features" || (actualCurrentView === "home" && pathname === "/") 
                     ? "bg-accent text-foreground" 
                     : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
@@ -176,7 +176,7 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
             >
               <Link href="/workflows">
                 <button 
-                  className={`px-3 py-2 rounded-lg flex items-center gap-1 transition-colors ${
+                  className={`px-3 py-2 rounded-lg flex items-center gap-1 transition-colors text-base ${
                     activeDropdown === "workflows" || pathname === "/workflows"
                       ? "bg-accent text-foreground" 
                       : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
@@ -191,7 +191,7 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
             {/* Pricing */}
             <Link href="/pricing">
               <button 
-                className={`px-3 py-2 rounded-lg transition-colors cursor-pointer ${
+                className={`px-3 py-2 rounded-lg transition-colors cursor-pointer text-base ${
                   pathname === "/pricing"
                     ? "bg-accent text-foreground" 
                     : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
@@ -204,7 +204,7 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
             {/* Request Demo */}
             <Link href="/request-demo">
               <button 
-                className={`px-3 py-2 rounded-lg transition-colors cursor-pointer ${
+                className={`px-3 py-2 rounded-lg transition-colors cursor-pointer text-base ${
                   pathname === "/request-demo"
                     ? "bg-accent text-foreground" 
                     : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
@@ -217,7 +217,7 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
             {/* Blog - Always use Next.js routing for blog */}
             <Link 
               href="/blog"
-              className={`px-3 py-2 rounded-lg transition-colors cursor-pointer ${
+              className={`px-3 py-2 rounded-lg transition-colors cursor-pointer text-base ${
                 actualCurrentView === "blog-hub" || actualCurrentView === "blog-post"
                   ? "bg-accent text-foreground" 
                   : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
@@ -230,7 +230,7 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
           {/* Right Actions */}
           <div className="hidden lg:flex items-center gap-3">
             <Button 
-                className="cursor-pointer"
+                className="cursor-pointer text-base"
                 variant="ghost"
                 onClick={() => handleNavigation("request-demo")}
                 >
@@ -238,7 +238,7 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
             </Button>
             <Button 
               onClick={() => handleNavigation("home", "waitlist")}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 cursor-pointer"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 cursor-pointer text-base"
             >
               Join the Beta
             </Button>

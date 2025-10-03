@@ -152,7 +152,7 @@ const integrationPoints = [
 
 export function EnterpriseIntegrations({ onNavigate }: EnterpriseIntegrationsProps) {
   return (
-    <div className="pb-0">
+    <div className="pb-0 font-[family-name:var(--font-suse-mono)]">
       {/* Top Features Navigation */}
       <FeaturesNav variant="top" />
       
@@ -181,16 +181,17 @@ export function EnterpriseIntegrations({ onNavigate }: EnterpriseIntegrationsPro
                 <Button 
                   size="lg"
                   onClick={() => onNavigate("request-demo")}
-                  className="bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700"
+                  className="bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 cursor-pointer"
                 >
-                  Request Enterprise Demo
+                  Request a Demo
                 </Button>
                 <Button 
                   size="lg"
                   variant="outline"
-                  onClick={() => onNavigate("pricing")}
+                  onClick={() => { window.location.href = "/#waitlist"; }}
+                  className="cursor-pointer"
                 >
-                  View Pricing
+                  Join the Beta
                 </Button>
               </>
             ) : (
@@ -198,17 +199,18 @@ export function EnterpriseIntegrations({ onNavigate }: EnterpriseIntegrationsPro
                 <Link href="/request-demo">
                   <Button 
                     size="lg"
-                    className="bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700"
+                    className="bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 cursor-pointer"
                   >
-                    Request Enterprise Demo
+                    Request a Demo
                   </Button>
                 </Link>
-                <Link href="/pricing">
+                <Link href="/#waitlist">
                   <Button 
                     size="lg"
                     variant="outline"
+                    className="cursor-pointer"
                   >
-                    View Pricing
+                    Join the Beta
                   </Button>
                 </Link>
               </>
@@ -353,26 +355,47 @@ export function EnterpriseIntegrations({ onNavigate }: EnterpriseIntegrationsPro
           <p className="text-xl mb-8 opacity-90">
             Get the compliance, security, and integrations you need.
           </p>
-          {onNavigate ? (
-            <Button 
-              size="lg"
-              onClick={() => onNavigate("request-demo")}
-              className="bg-white text-teal-600 hover:bg-gray-100"
-            >
-              Request Enterprise Demo
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-          ) : (
-            <Link href="/request-demo">
-              <Button 
-                size="lg"
-                className="bg-white text-teal-600 hover:bg-gray-100"
-              >
-                Request Enterprise Demo
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </Link>
-          )}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {onNavigate ? (
+              <>
+                <Button 
+                  size="lg"
+                  onClick={() => onNavigate("request-demo")}
+                  className="bg-white text-teal-600 hover:bg-gray-100 cursor-pointer"
+                >
+                  Request a Demo
+                </Button>
+                <Button 
+                  size="lg"
+                  onClick={() => { window.location.href = "/#waitlist"; }}
+                  variant="outline"
+                  className="bg-transparent border-2 border-white text-white hover:bg-white/10 cursor-pointer"
+                >
+                  Join the Beta
+                </Button>
+              </>
+            ) : (
+              <>
+                <Link href="/request-demo">
+                  <Button 
+                    size="lg"
+                    className="bg-white text-teal-600 hover:bg-gray-100 cursor-pointer"
+                  >
+                    Request a Demo
+                  </Button>
+                </Link>
+                <Link href="/#waitlist">
+                  <Button 
+                    size="lg"
+                    variant="outline"
+                    className="bg-transparent border-2 border-white text-white hover:bg-white/10 cursor-pointer"
+                  >
+                    Join the Beta
+                  </Button>
+                </Link>
+              </>
+            )}
+          </div>
         </div>
       </div>
       

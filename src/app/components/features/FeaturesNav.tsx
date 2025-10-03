@@ -55,7 +55,7 @@ export function FeaturesNav({ variant = "top" }: FeaturesNavProps) {
 
   return (
     <section className={`${variant === "top" ? "bg-gradient-to-br from-gray-50 to-gray-100 border-y border-gray-200" : "bg-gradient-to-br from-gray-900 to-gray-800 text-white border-t border-white/10"}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 font-[family-name:var(--font-suse-mono)]">
         
         {/* MOBILE VIEW - Compact Horizontal Scroll */}
         <div className="lg:hidden py-4">

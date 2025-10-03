@@ -37,7 +37,7 @@ export function WorkflowVisualization({ config }: WorkflowVisualizationProps) {
   const bgGradient = getBackgroundGradient(config.accentColor);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-gray-50/30 to-slate-50/50">
+    <div className="min-h-screen bg-gradient-to-br from-white via-gray-50/30 to-slate-50/50 font-[family-name:var(--font-suse-mono)]">
       {/* Hero Section */}
       <WorkflowHero
         title={config.title}
