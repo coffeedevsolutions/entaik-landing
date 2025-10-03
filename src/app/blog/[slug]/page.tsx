@@ -36,7 +36,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const url = `https://uptaik.com/blog/${slug}`;
-  const ogImage = `/og/${slug}.png`; // We'll generate these later
+  // Use custom ogImage from frontmatter, fallback to auto-generated or hero image
+  const ogImage = post.ogImage || post.heroImage || `/og/${slug}.png`;
 
   return {
     title: `${post.title} — Uptaik Blog`,
@@ -196,6 +197,20 @@ export default async function BlogPostPage({ params }: PageProps) {
                   },
                 }}
                 components={{
+                  // Custom Image component for MDX
+                  img: ({ src, alt }) => {
+                    // Handle both absolute and relative paths
+                    const imageSrc = src?.startsWith('/') ? src : `/images/${src}`;
+                    return (
+                      <Image 
+                        src={imageSrc}
+                        alt={alt || ''}
+                        width={800}
+                        height={450}
+                        className="rounded-lg my-8 w-full"
+                      />
+                    );
+                  },
                   h1: ({ children }) => (
                     <h1 className="text-4xl font-bold tracking-tight mt-8 mb-4 text-gray-900">
                       {children}

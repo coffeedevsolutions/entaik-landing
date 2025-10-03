@@ -19,6 +19,7 @@ export interface PostFrontmatter {
     role: string;
   };
   heroImage: string;
+  ogImage?: string;
   tags?: string[];
   draft?: boolean;
   canonical?: string;

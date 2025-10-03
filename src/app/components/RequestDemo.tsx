@@ -102,27 +102,6 @@ export function RequestDemo({ onNavigate }: RequestDemoProps) {
                   </div>
                 </Card>
               </div>
-
-              <div className="p-6 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 rounded-2xl space-y-4">
-                <h3 className="text-lg font-semibold">Trusted by leading enterprises</h3>
-                <p className="text-sm text-muted-foreground">
-                  Join construction firms, healthcare systems, and utilities companies using Uptaik to streamline their project intake.
-                </p>
-                <div className="flex gap-4 text-sm">
-                  <div>
-                    <div className="text-2xl text-blue-600">3.5hrs</div>
-                    <div className="text-muted-foreground">saved per request</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl text-purple-600">85%</div>
-                    <div className="text-muted-foreground">faster intake</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl text-pink-600">100%</div>
-                    <div className="text-muted-foreground">complete briefs</div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

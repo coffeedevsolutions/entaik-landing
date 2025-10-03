@@ -1,66 +1,91 @@
 "use client";
 
+import { useState } from "react";
+import Link from "next/link";
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { ArrowRight, Workflow, Users, Building, Heart, Zap, FileText } from "lucide-react";
+import { ArrowRight, AlertCircle, Lightbulb, Zap, Heart, Scale, ShoppingCart, GraduationCap, DollarSign, Laptop, LucideIcon } from "lucide-react";
+import { workflowConfigs } from "./workflow-visualization/workflow-configs";
 
 interface WorkflowsProps {
   onNavigate?: (view: string) => void;
 }
 
-const workflows = [
-  {
-    id: "pmo-intake",
-    icon: Workflow,
-    title: "PMO Project Intake",
-    description: "Capture complete project requests from stakeholders across your organization with adaptive AI surveys.",
-    features: ["Adaptive questioning", "Auto-prioritization", "Jira integration", "Stakeholder notifications"],
-    category: "Product Management"
+// Map workflow IDs to categories and icons
+const workflowMetadata: Record<string, { category: string; icon: LucideIcon }> = {
+  "technical-request": {
+    category: "IT Operations",
+    icon: Zap
   },
-  {
-    id: "it-requests",
-    icon: Zap,
-    title: "IT Service Requests",
-    description: "Streamline infrastructure and system requests with intelligent intake that captures technical requirements.",
-    features: ["Technical specs capture", "SLA tracking", "Resource allocation", "Change management"],
-    category: "IT Operations"
+  "feature-request": {
+    category: "Product Management",
+    icon: Lightbulb
   },
-  {
-    id: "construction-capital",
-    icon: Building,
-    title: "Capital Project Planning",
-    description: "Manage construction and facilities projects with compliance-aware intake for capital planning.",
-    features: ["Budget tracking", "Compliance checks", "Safety requirements", "Vendor coordination"],
-    category: "Construction"
+  "incident-response": {
+    category: "IT Operations",
+    icon: AlertCircle
   },
-  {
-    id: "healthcare-enhancement",
-    icon: Heart,
-    title: "Clinical System Enhancements",
-    description: "Capture clinical improvement requests while maintaining HIPAA compliance and patient safety standards.",
-    features: ["HIPAA compliance", "Patient impact analysis", "Clinical workflow mapping", "Regulatory tracking"],
-    category: "Healthcare"
+  "healthcare-patient-experience": {
+    category: "Healthcare",
+    icon: Heart
   },
-  {
-    id: "process-improvement",
-    icon: Users,
-    title: "Process Improvement Requests",
-    description: "Collect and prioritize operational improvement ideas from frontline staff and managers.",
-    features: ["Impact scoring", "ROI estimation", "Cross-functional review", "Implementation tracking"],
-    category: "Operations"
+  "legal-client-onboarding": {
+    category: "Legal & Professional Services",
+    icon: Scale
   },
-  {
-    id: "document-automation",
-    icon: FileText,
-    title: "Automated Documentation",
-    description: "Generate project briefs, requirements docs, and stakeholder communications automatically from intake data.",
-    features: ["Template customization", "Auto-generation", "Version control", "Approval workflows"],
-    category: "Documentation"
+  "retail-returns-feedback": {
+    category: "Retail & E-Commerce",
+    icon: ShoppingCart
+  },
+  "education-course-feedback": {
+    category: "Education",
+    icon: GraduationCap
+  },
+  "finance-claim-intake": {
+    category: "Finance & Insurance",
+    icon: DollarSign
+  },
+  "internal-it-hr-ticketing": {
+    category: "Internal Operations",
+    icon: Laptop
   }
-];
+};
+
+// Generate workflows from config
+const workflows = Object.values(workflowConfigs).map(config => {
+  const metadata = workflowMetadata[config.id] || { 
+    category: "General", 
+    icon: Zap 
+  };
+  
+  // Extract key features from benefits
+  const features = config.benefits.slice(0, 4).map(benefit => benefit.text);
+  
+  return {
+    id: config.id,
+    configId: config.id,
+    icon: metadata.icon,
+    title: config.title,
+    description: config.description,
+    features,
+    category: metadata.category,
+    accentColor: config.accentColor,
+    hasVisualization: true
+  };
+});
 
 export function Workflows({ onNavigate }: WorkflowsProps) {
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  
+  // Extract unique categories
+  const categories = ["All", ...Array.from(new Set(workflows.map(w => w.category)))];
+  
+  // Filter workflows based on selected category
+  const filteredWorkflows = selectedCategory === "All" 
+    ? workflows 
+    : workflows.filter(w => w.category === selectedCategory);
+
   return (
     <div className="pt-20 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,16 +101,40 @@ export function Workflows({ onNavigate }: WorkflowsProps) {
               Get started quickly with templates designed for your industry and function. Customize to match your exact needs.
             </p>
           </div>
+          
+          {/* Category Filter */}
+          <div className="mb-12">
+            <div className="flex flex-wrap justify-center gap-3">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-6 py-2.5 rounded-full font-medium transition-all duration-200 ${
+                    selectedCategory === category
+                      ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/30"
+                      : "bg-white text-gray-700 border border-gray-200 hover:border-blue-300 hover:bg-blue-50"
+                  }`}
+                >
+                  {category}
+                  <span className={`ml-2 text-sm ${
+                    selectedCategory === category ? "text-blue-100" : "text-gray-500"
+                  }`}>
+                    ({category === "All" ? workflows.length : workflows.filter(w => w.category === category).length})
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
 
           {/* Workflows Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
-            {workflows.map((workflow) => {
+            {filteredWorkflows.map((workflow) => {
               const Icon = workflow.icon;
               return (
                 <Card key={workflow.id} className="p-6 space-y-6 hover:shadow-xl transition-all group">
                   <div className="space-y-4">
                     <div className="flex items-start justify-between">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white">
+                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${workflow.accentColor} flex items-center justify-center text-white shadow-md`}>
                         <Icon className="w-6 h-6" />
                       </div>
                       <Badge variant="outline" className="text-xs">
@@ -115,10 +164,21 @@ export function Workflows({ onNavigate }: WorkflowsProps) {
                     </ul>
                   </div>
 
-                  <Button variant="outline" className="w-full gap-2 group-hover:bg-blue-50 group-hover:text-blue-600 group-hover:border-blue-200 transition-all">
-                    View workflow
-                    <ArrowRight className="w-4 h-4" />
-                  </Button>
+                  {workflow.hasVisualization && workflow.configId ? (
+                    <Link href={`/workflows/${workflow.configId}`} className="w-full">
+                      <Button 
+                        className="w-full gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white cursor-pointer"
+                      >
+                        View interactive workflow
+                        <ArrowRight className="w-4 h-4" />
+                      </Button>
+                    </Link>
+                  ) : (
+                    <Button variant="outline" className="w-full gap-2 group-hover:bg-blue-50 group-hover:text-blue-600 group-hover:border-blue-200 transition-all">
+                      View workflow
+                      <ArrowRight className="w-4 h-4" />
+                    </Button>
+                  )}
                 </Card>
               );
             })}
@@ -133,7 +193,7 @@ export function Workflows({ onNavigate }: WorkflowsProps) {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 cursor-pointer"
                 onClick={() => onNavigate?.("request-demo")}
               >
                 Request a Demo

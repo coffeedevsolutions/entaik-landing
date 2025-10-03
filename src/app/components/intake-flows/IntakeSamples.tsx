@@ -9,7 +9,7 @@ import { LayoutGrid, MessageSquare, Layers, ListChecks } from 'lucide-react';
 
 export function IntakeSamples() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-4 md:p-8">
+    <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-4 md:p-8">
       <div className="max-w-[1600px] mx-auto">
         {/* Header */}
         <div className="mb-8 text-center">
@@ -44,44 +44,52 @@ export function IntakeSamples() {
               </TabsTrigger>
             </TabsList>
 
-            <TabsContent value="traditional" className="h-[calc(100vh-200px)]">
+            <TabsContent value="traditional" className="pb-8">
               <div className="mb-4 p-4 bg-white rounded-lg border border-border">
                 <h3 className="text-lg font-semibold text-foreground mb-1">Traditional Form Flow</h3>
                 <p className="text-sm text-muted-foreground">
                   Multi-step form with progress bar and standard form fields
                 </p>
               </div>
-              <TraditionalFormFlow />
+              <div className="h-[600px]">
+                <TraditionalFormFlow />
+              </div>
             </TabsContent>
 
-            <TabsContent value="one-question" className="h-[calc(100vh-200px)]">
+            <TabsContent value="one-question" className="pb-8">
               <div className="mb-4 p-4 bg-white rounded-lg border border-border">
                 <h3 className="text-lg font-semibold text-foreground mb-1">One-Question-at-a-Time</h3>
                 <p className="text-sm text-muted-foreground">
                   Large focused questions with animated transitions
                 </p>
               </div>
-              <OneQuestionFlow />
+              <div className="h-[600px]">
+                <OneQuestionFlow />
+              </div>
             </TabsContent>
 
-            <TabsContent value="chatbot" className="h-[calc(100vh-200px)]">
+            <TabsContent value="chatbot" className="pb-8">
               <div className="mb-4 p-4 bg-white rounded-lg border border-border">
                 <h3 className="text-lg font-semibold text-foreground mb-1">Conversational / Chatbot</h3>
                 <p className="text-sm text-muted-foreground">
                   Chat-style interface with message bubbles
                 </p>
               </div>
-              <ChatbotFlow />
+              <div className="h-[600px]">
+                <ChatbotFlow />
+              </div>
             </TabsContent>
 
-            <TabsContent value="card-based" className="h-[calc(100vh-200px)]">
+            <TabsContent value="card-based" className="pb-8">
               <div className="mb-4 p-4 bg-white rounded-lg border border-border">
                 <h3 className="text-lg font-semibold text-foreground mb-1">Hybrid Card-Based Flow</h3>
                 <p className="text-sm text-muted-foreground">
                   Expandable cards with visual progress tracking
                 </p>
               </div>
-              <CardBasedFlow />
+              <div className="h-[600px]">
+                <CardBasedFlow />
+              </div>
             </TabsContent>
           </Tabs>
         </div>

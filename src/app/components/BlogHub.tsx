@@ -2,6 +2,7 @@ import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { ArrowRight, Calendar } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { BlogPost } from "@/types/blog";
 
 interface BlogHubProps {
@@ -38,8 +39,19 @@ export function BlogHub({ onNavigate, blogPosts = [] }: BlogHubProps) {
               onClick={onNavigate ? () => handlePostClick(blogPosts[0].slug) : undefined}
             >
             <div className="grid md:grid-cols-2 gap-0">
-              <div className="aspect-video md:aspect-auto bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 flex items-center justify-center p-12">
-                <div className="w-full h-full rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 opacity-20" />
+              <div className="relative aspect-video md:aspect-auto bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 overflow-hidden">
+                {blogPosts[0].imageUrl ? (
+                  <Image 
+                    src={blogPosts[0].imageUrl}
+                    alt={blogPosts[0].title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center p-12">
+                    <div className="w-full h-full rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 opacity-20" />
+                  </div>
+                )}
               </div>
               <div className="p-8 md:p-12 flex flex-col justify-center space-y-4">
                 <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100 border-blue-200 w-fit">
