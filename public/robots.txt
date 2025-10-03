@@ -7,7 +7,7 @@ Disallow: /admin/
 Disallow: /private/
 
 # Host
-Host: https://uptaik.com
+Host: https://www.uptaik.com
 
 # Sitemaps
-Sitemap: https://uptaik.com/sitemap.xml
+Sitemap: https://www.uptaik.com/sitemap.xml
