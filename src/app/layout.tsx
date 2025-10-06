@@ -79,7 +79,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.uptaik.com",
+    url: "https://www.uptaik.com/",
     siteName: "Uptaik",
     title: "Uptaik — AI-Powered Project Intake & Prioritization",
     description:
@@ -102,7 +102,7 @@ export const metadata: Metadata = {
     creator: "@uptaik",
   },
   alternates: {
-    canonical: "https://www.uptaik.com",
+    canonical: "https://www.uptaik.com/",
   },
   verification: {
     google: "your-google-site-verification-code",

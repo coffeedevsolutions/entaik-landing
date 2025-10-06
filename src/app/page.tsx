@@ -5,20 +5,38 @@ import App from "./components/App";
 export const metadata: Metadata = {
   title: "Uptaik — Transform Project Intake with AI | Beta Access",
   description:
-    "Join the beta for AI-powered project intake that adapts, documents, and delivers. Transform scattered emails into structured briefs, automated prioritization, and Jira-ready epics.",
+    "AI-powered project intake that transforms emails into structured briefs with automated prioritization and Jira integration. Join the beta today.",
+  alternates: {
+    canonical: "https://www.uptaik.com/",
+  },
   openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://www.uptaik.com/",
+    siteName: "Uptaik",
     title: "Uptaik — Transform Project Intake with AI | Beta Access",
     description:
-      "Join the beta for AI-powered project intake that adapts, documents, and delivers. Transform scattered emails into structured briefs.",
-    url: "https://www.uptaik.com",
+      "AI-powered project intake that transforms emails into structured briefs with automated prioritization and Jira integration. Join the beta today.",
     images: [
       {
-        url: "/og-hero.png",
+        url: "https://www.uptaik.com/og-hero.png",
         width: 1200,
         height: 630,
         alt: "Uptaik AI project intake dashboard showing adaptive surveys and automated project briefs",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Uptaik — Transform Project Intake with AI | Beta Access",
+    description:
+      "AI-powered project intake that transforms emails into structured briefs with automated prioritization and Jira integration. Join the beta today.",
+    images: ["https://www.uptaik.com/og-hero.png"],
+    creator: "@uptaik",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

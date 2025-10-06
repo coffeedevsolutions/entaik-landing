@@ -19,7 +19,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1,
     },
     {
-      url: 'https://www.uptaik.com/blog',
+      url: 'https://www.uptaik.com/blog/',
       lastModified: new Date(),
       changeFrequency: 'daily' as const,
       priority: 0.9,
