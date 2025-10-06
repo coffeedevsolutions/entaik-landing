@@ -9,14 +9,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact Us | Uptaik",
     description: "Get in touch with the Uptaik team. We're here to answer your questions and help you transform your project intake process.",
-    url: "https://uptaik.com/contact",
+    url: "https://www.uptaik.com/contact",
   },
   twitter: {
     title: "Contact Us | Uptaik",
     description: "Get in touch with the Uptaik team. We're here to answer your questions and help you transform your project intake process.",
   },
   alternates: {
-    canonical: "https://uptaik.com/contact",
+    canonical: "https://www.uptaik.com/contact",
   },
 };
 

@@ -158,7 +158,7 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
             >
               <button 
                 className={`px-3 py-2 rounded-lg flex items-center gap-1 transition-colors text-base ${
-                  activeDropdown === "features" || (actualCurrentView === "home" && pathname === "/") 
+                  activeDropdown === "features" || pathname.startsWith("/features")
                     ? "bg-accent text-foreground" 
                     : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
                 }`}

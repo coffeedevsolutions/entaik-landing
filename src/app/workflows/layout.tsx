@@ -8,11 +8,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Workflows - Uptaik | AI-Powered Workflow Management",
     description: "Streamline your workflow management with Uptaik's AI-powered automation. Transform complex processes into efficient, intelligent workflows.",
-    url: "https://uptaik.com/workflows",
+    url: "https://www.uptaik.com/workflows",
   },
   twitter: {
     title: "Workflows - Uptaik | AI-Powered Workflow Management",
     description: "Streamline your workflow management with Uptaik's AI-powered automation. Transform complex processes into efficient, intelligent workflows.",
+  },
+  alternates: {
+    canonical: "https://www.uptaik.com/workflows",
   },
 };
 

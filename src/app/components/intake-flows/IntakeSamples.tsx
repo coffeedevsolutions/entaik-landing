@@ -48,7 +48,7 @@ export function IntakeSamples() {
               <div className="mb-4 p-4 bg-white rounded-lg border border-border">
                 <h3 className="text-lg font-semibold text-foreground mb-1">Traditional Form Flow</h3>
                 <p className="text-sm text-muted-foreground">
-                  Multi-step form with progress bar and standard form fields
+                  Multi-step form with standard form fields and no AI driven questions
                 </p>
               </div>
               <div className="h-[600px]">
@@ -60,7 +60,7 @@ export function IntakeSamples() {
               <div className="mb-4 p-4 bg-white rounded-lg border border-border">
                 <h3 className="text-lg font-semibold text-foreground mb-1">One-Question-at-a-Time</h3>
                 <p className="text-sm text-muted-foreground">
-                  Large focused questions with animated transitions
+                    Large focused questions with adaptive AI follow-up questions
                 </p>
               </div>
               <div className="h-[600px]">
@@ -106,7 +106,7 @@ export function IntakeSamples() {
                 <div>
                   <h3 className="text-lg font-semibold text-foreground mb-1">Traditional Form Flow</h3>
                   <p className="text-sm text-muted-foreground">
-                    Multi-step form with progress bar and standard form fields
+                      Multi-step form with standard form fields and no AI driven questions
                   </p>
                 </div>
               </div>
@@ -126,7 +126,7 @@ export function IntakeSamples() {
                 <div>
                   <h3 className="text-lg font-semibold text-foreground mb-1">One-Question-at-a-Time</h3>
                   <p className="text-sm text-muted-foreground">
-                    Large focused questions with animated transitions
+                    Large focused questions with adaptive AI follow-up questions
                   </p>
                 </div>
               </div>
