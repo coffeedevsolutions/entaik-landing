@@ -1,22 +1,16 @@
 {
-    "redirects": [
-      {
-        "source": "/:path*",
-        "has": [
-          { "type": "host", "value": "uptaik.com" }
-        ],
-        "destination": "https://www.uptaik.com/:path*",
-        "permanent": true
-      },
-      {
-        "source": "/:path*",
-        "has": [
-          { "type": "protocol", "value": "http" },
-          { "type": "host", "value": "www.uptaik.com" }
-        ],
-        "destination": "https://www.uptaik.com/:path*",
-        "permanent": true
-      }
-    ]
-  }
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "uptaik.com"
+        }
+      ],
+      "destination": "https://www.uptaik.com/:path*",
+      "permanent": true
+    }
+  ]
+}
   
