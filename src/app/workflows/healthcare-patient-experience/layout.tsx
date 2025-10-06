@@ -1,11 +1,30 @@
 import { Metadata } from "next";
 
+const title = "Healthcare Patient Experience Survey Workflow | Uptaik";
+const description = "Capture timely, nuanced patient feedback after visits with adaptive questions and fatigue-aware completion.";
+const url = "https://www.uptaik.com/workflows/healthcare-patient-experience";
+const image = "https://www.uptaik.com/og-hero.png";
+const imageAlt = "Uptaik Healthcare Patient Experience Workflow";
+
 export const metadata: Metadata = {
-  title: "Healthcare Patient Experience Survey Workflow | Uptaik",
-  description: "Capture timely, nuanced patient feedback after visits with adaptive questions and fatigue-aware completion.",
-  alternates: {
-    canonical: "https://www.uptaik.com/workflows/healthcare-patient-experience",
+  title,
+  description,
+  alternates: { canonical: url },
+  openGraph: {
+    type: "website",
+    url,
+    title,
+    description,
+    siteName: "Uptaik",
+    images: [{ url: image, width: 1200, height: 630, alt: imageAlt }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [image],
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function HealthcarePatientExperienceLayout({

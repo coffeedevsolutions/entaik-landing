@@ -86,7 +86,7 @@ export const metadata: Metadata = {
       "Replace static forms with adaptive AI intake, automated briefs, prioritization, and Jira-ready epics.",
     images: [
       {
-        url: "/og-hero.png",
+        url: "https://www.uptaik.com/og-hero.png",
         width: 1200,
         height: 630,
         alt: "Uptaik AI project intake dashboard mockup",
@@ -98,7 +98,7 @@ export const metadata: Metadata = {
     title: "Uptaik — AI-Powered Project Intake",
     description:
       "Adaptive AI intake surveys, automated documentation, and Jira integration for enterprise teams.",
-    images: ["/og-hero.png"],
+    images: ["https://www.uptaik.com/og-hero.png"],
     creator: "@uptaik",
   },
   alternates: {

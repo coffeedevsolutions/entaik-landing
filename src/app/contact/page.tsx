@@ -3,21 +3,38 @@ import { ContactForm } from "../components/ContactForm";
 import { Navigation } from "../components/Navigation";
 import { Footer } from "../components/Footer";
 
+const title = "Contact Us | Uptaik";
+const description = "Get in touch with the Uptaik team. We're here to answer your questions and help you transform your project intake process.";
+const url = "https://www.uptaik.com/contact";
+const image = "https://www.uptaik.com/og-hero.png";
+const imageAlt = "Uptaik AI-powered project intake platform";
+
 export const metadata: Metadata = {
-  title: "Contact Us | Uptaik",
-  description: "Get in touch with the Uptaik team. We're here to answer your questions and help you transform your project intake process.",
+  title,
+  description,
+  alternates: { canonical: url },
   openGraph: {
-    title: "Contact Us | Uptaik",
-    description: "Get in touch with the Uptaik team. We're here to answer your questions and help you transform your project intake process.",
-    url: "https://www.uptaik.com/contact",
+    type: "website",
+    url,
+    title,
+    description,
+    siteName: "Uptaik",
+    images: [
+      {
+        url: image,
+        width: 1200,
+        height: 630,
+        alt: imageAlt,
+      },
+    ],
   },
   twitter: {
-    title: "Contact Us | Uptaik",
-    description: "Get in touch with the Uptaik team. We're here to answer your questions and help you transform your project intake process.",
+    card: "summary_large_image",
+    title,
+    description,
+    images: [image],
   },
-  alternates: {
-    canonical: "https://www.uptaik.com/contact",
-  },
+  robots: { index: true, follow: true },
 };
 
 export default function ContactPage() {

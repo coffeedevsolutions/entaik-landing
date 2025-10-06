@@ -1,11 +1,30 @@
 import { Metadata } from "next";
 
+const title = "Product Feature Request Workflow | Uptaik";
+const description = "Capture, qualify, and prioritize feature requests from customers and internal teams with an adaptive intake flow.";
+const url = "https://www.uptaik.com/workflows/feature-request";
+const image = "https://www.uptaik.com/og-hero.png";
+const imageAlt = "Uptaik Feature Request Workflow";
+
 export const metadata: Metadata = {
-  title: "Product Feature Request Workflow | Uptaik",
-  description: "Capture, qualify, and prioritize feature requests from customers and internal teams with an adaptive intake flow.",
-  alternates: {
-    canonical: "https://www.uptaik.com/workflows/feature-request",
+  title,
+  description,
+  alternates: { canonical: url },
+  openGraph: {
+    type: "website",
+    url,
+    title,
+    description,
+    siteName: "Uptaik",
+    images: [{ url: image, width: 1200, height: 630, alt: imageAlt }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [image],
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function FeatureRequestLayout({
