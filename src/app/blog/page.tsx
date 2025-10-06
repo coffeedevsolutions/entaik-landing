@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Blog - Uptaik | AI Project Intake Insights",
     description: "Discover best practices, frameworks, and insights for AI-powered project intake, prioritization, and automation.",
-    url: "https://www.uptaik.com/blog/",
+    url: "https://www.uptaik.com/blog",
   },
 };
 
