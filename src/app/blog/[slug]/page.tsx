@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  const url = `https://uptaik.com/blog/${slug}`;
+  const url = `https://www.uptaik.com/blog/${slug}`;
   // Use custom ogImage from frontmatter, fallback to auto-generated or hero image
   const ogImage = post.ogImage || post.heroImage || `/og/${slug}.png`;
 
@@ -80,7 +80,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     notFound();
   }
 
-  const url = `https://uptaik.com/blog/${slug}`;
+  const url = `https://www.uptaik.com/blog/${slug}`;
   
   // JSON-LD structured data for SEO
   const jsonLd = {
@@ -95,14 +95,14 @@ export default async function BlogPostPage({ params }: PageProps) {
       name: post.author.name,
       jobTitle: post.author.role,
     },
-    image: [`https://uptaik.com${post.heroImage}`],
+    image: [`https://www.uptaik.com${post.heroImage}`],
     mainEntityOfPage: url,
     publisher: {
       '@type': 'Organization',
       name: 'Uptaik',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://uptaik.com/images/uptaik-logo-2-white.png'
+        url: 'https://www.uptaik.com/images/uptaik-logo-2-white.png'
       }
     }
   };

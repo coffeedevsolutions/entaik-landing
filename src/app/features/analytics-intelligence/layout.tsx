@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Analytics & Intelligence — Uptaik",
     description: "Unlock insights into performance, predict risks, and optimize outcomes with AI analytics. Make data-driven decisions with project intelligence.",
-    url: "https://uptaik.com/features/analytics-intelligence",
+    url: "https://www.uptaik.com/features/analytics-intelligence",
   },
 };
 

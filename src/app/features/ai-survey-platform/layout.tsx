@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI Survey Platform — Uptaik",
     description: "Create smarter surveys that actually get completed. AI-driven intake forms that adapt in real time, reduce fatigue, and capture better business data.",
-    url: "https://uptaik.com/features/ai-survey-platform",
+    url: "https://www.uptaik.com/features/ai-survey-platform",
   },
 };
 

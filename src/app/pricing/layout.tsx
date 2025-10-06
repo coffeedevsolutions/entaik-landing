@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pricing - Uptaik | Flexible Plans for Every Team",
     description: "Simple, transparent pricing for AI-powered workflow management. Choose the plan that fits your team's needs. Start free, scale as you grow.",
-    url: "https://uptaik.com/pricing",
+    url: "https://www.uptaik.com/pricing",
   },
   twitter: {
     title: "Pricing - Uptaik | Flexible Plans for Every Team",

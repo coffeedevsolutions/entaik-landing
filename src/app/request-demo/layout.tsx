@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Request a Demo - Uptaik | See AI-Powered Workflows in Action",
     description: "Schedule a personalized demo of Uptaik's AI-powered workflow management platform. See how we can transform your intake process.",
-    url: "https://uptaik.com/request-demo",
+    url: "https://www.uptaik.com/request-demo",
   },
   twitter: {
     title: "Request a Demo - Uptaik | See AI-Powered Workflows in Action",

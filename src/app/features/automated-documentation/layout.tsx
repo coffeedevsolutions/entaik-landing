@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Automated Documentation — Uptaik",
     description: "Save hours of manual work by transforming intake responses into structured briefs, work plans, and backlog items. Turn conversations into professional project documentation.",
-    url: "https://uptaik.com/features/automated-documentation",
+    url: "https://www.uptaik.com/features/automated-documentation",
   },
 };
 

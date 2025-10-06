@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Uptaik — Transform Project Intake with AI | Beta Access",
     description:
       "Join the beta for AI-powered project intake that adapts, documents, and delivers. Transform scattered emails into structured briefs.",
-    url: "https://uptaik.com",
+    url: "https://www.uptaik.com",
     images: [
       {
         url: "/og-hero.png",
@@ -37,8 +37,8 @@ export default function HomePage() {
             operatingSystem: "Web",
             description:
               "AI-powered project intake with adaptive surveys, automated project briefs, prioritization, and Jira epic creation for enterprise teams.",
-            url: "https://uptaik.com",
-            screenshot: "https://uptaik.com/og-hero.png",
+            url: "https://www.uptaik.com",
+            screenshot: "https://www.uptaik.com/og-hero.png",
             featureList: [
               "Adaptive AI Intake Surveys",
               "Auto-Generated Project Briefs", 
@@ -58,8 +58,8 @@ export default function HomePage() {
             publisher: {
               "@type": "Organization",
               name: "Uptaik",
-              url: "https://uptaik.com",
-              logo: "https://uptaik.com/logo.png"
+              url: "https://www.uptaik.com",
+              logo: "https://www.uptaik.com/logo.png"
             },
             audience: {
               "@type": "Audience",

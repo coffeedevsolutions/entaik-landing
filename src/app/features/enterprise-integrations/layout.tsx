@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Enterprise & Integrations — Uptaik",
     description: "Secure, scalable, and compliant—built for IT leaders and enterprise buyers. Enterprise-ready platform that works with your workflow.",
-    url: "https://uptaik.com/features/enterprise-integrations",
+    url: "https://www.uptaik.com/features/enterprise-integrations",
   },
 };
 

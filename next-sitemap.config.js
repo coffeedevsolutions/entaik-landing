@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://uptaik.com',
+  siteUrl: process.env.SITE_URL || 'https://www.uptaik.com',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   changefreq: 'weekly',
@@ -16,7 +16,7 @@ module.exports = {
       },
     ],
     additionalSitemaps: [
-      'https://uptaik.com/sitemap.xml',
+      'https://www.uptaik.com/sitemap.xml',
     ],
   },
   transform: async (config, path) => {
