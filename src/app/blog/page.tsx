@@ -18,17 +18,29 @@ export const metadata: Metadata = {
     "WSJF framework",
     "Jira automation"
   ],
+  alternates: {
+    canonical: "https://www.uptaik.com/blog"
+  },
   openGraph: {
     type: "website",
     title: "Blog - Uptaik | AI Project Management & Automation Insights",
     description: "Discover AI in project management best practices, top project management tools, and automation insights for enterprise teams.",
     url: "https://www.uptaik.com/blog",
     siteName: "Uptaik",
+    images: [
+      {
+        url: "https://www.uptaik.com/og-hero.png",
+        width: 1200,
+        height: 630,
+        alt: "Uptaik AI project intake dashboard"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
     title: "Uptaik Blog | AI Project Management Insights",
     description: "Best practices for AI in project management, top tools, and automation insights.",
+    images: ["https://www.uptaik.com/og-hero.png"]
   },
 };
 
