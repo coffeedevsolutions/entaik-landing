@@ -63,7 +63,7 @@ export function ProblemSolution() {
     {
       icon: GitBranch,
       title: "Seamless Integration",
-      description: "Structured work items flow directly into Jira and backlog tools",
+      description: "Connects with top project management tools like Jira, Asana, and Linear—structured work items flow automatically",
       gradient: "from-emerald-500 to-teal-500"
     }
   ];
@@ -77,7 +77,7 @@ export function ProblemSolution() {
             From Chaos to <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Clarity</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Transform scattered project intake into a streamlined, AI-powered workflow that scales with your team
+            Transform scattered project intake into a streamlined AI project management workflow that integrates with your existing project management platforms
           </p>
         </div>
 
@@ -126,7 +126,7 @@ export function ProblemSolution() {
             <div className="text-center space-y-4">
               <h3 className="text-3xl font-bold text-gray-900">The Upt<span className="bg-gradient-to-r from-blue-600 to-purple-600 font-bold bg-clip-text text-transparent">ai</span>k Advantage</h3>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Intelligent automation that transforms how your team handles project intake
+                The most advanced AI in project management—intelligent automation that transforms how your team handles project intake and connects with your favorite project management platforms
               </p>
             </div>
             

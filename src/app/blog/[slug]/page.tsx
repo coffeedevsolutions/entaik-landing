@@ -37,7 +37,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const url = `https://www.uptaik.com/blog/${slug}`;
   // Use custom ogImage from frontmatter, fallback to auto-generated or hero image
-  const ogImage = post.ogImage || post.heroImage || `/og/${slug}.png`;
+  const ogImagePath = post.ogImage || post.heroImage || `/og/${slug}.png`;
+  // Ensure ogImage is an absolute URL for Open Graph
+  const ogImage = ogImagePath.startsWith('http') 
+    ? ogImagePath 
+    : `https://www.uptaik.com${ogImagePath}`;
 
   return {
     title: `${post.title} — Uptaik Blog`,
@@ -60,6 +64,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         }
       ],
       url,
+      siteName: "Uptaik",
     },
     twitter: {
       card: "summary_large_image",
@@ -122,8 +127,8 @@ export default async function BlogPostPage({ params }: PageProps) {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Back Button */}
             <Link href="/blog">
-              <Button variant="ghost" className="mb-8 gap-2">
-                <ArrowLeft className="w-4 h-4" />
+              <Button variant="ghost" className="mb-8 gap-2 cursor-pointer">
+                <ArrowLeft className="w-4 h-4 cursor-pointer" />
                 Back to Blog
               </Button>
             </Link>

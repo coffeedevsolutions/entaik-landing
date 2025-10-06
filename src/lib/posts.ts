@@ -23,6 +23,7 @@ export interface PostFrontmatter {
   tags?: string[];
   draft?: boolean;
   canonical?: string;
+  canonicalUrl?: string; // Support both canonical and canonicalUrl
 }
 
 export interface Post extends PostFrontmatter {
@@ -70,6 +71,8 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
       slug,
       content,
       readTime: frontmatter.readTime ?? calculatedReadTime,
+      // Normalize canonical URL - prefer canonicalUrl over canonical
+      canonical: frontmatter.canonicalUrl || frontmatter.canonical,
     };
   } catch (error) {
     console.error(`Error reading post ${slug}:`, error);

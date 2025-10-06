@@ -28,11 +28,11 @@ export function Hero() {
             
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight">
-                AI-Powered Project Intake & Workflow Automation for Non-Tech Enterprises
+                AI Project Management & Intake Platform for Enterprises
               </h1>
               
               <p className="text-lg text-muted-foreground max-w-xl">
-                Replace scattered emails and static forms with adaptive AI surveys that gather complete requirements, generate briefs, prioritize work, and create Jira-ready epics.
+                Transform project intake with AI for project management. Replace scattered emails and static forms with adaptive AI intake workflows that gather requirements, generate documentation, prioritize work, and integrate with top project management tools like Jira.
               </p>
             </div>
 
@@ -47,7 +47,7 @@ export function Hero() {
             </div>
 
             <p className="text-sm text-muted-foreground">
-              Built for construction, utilities, healthcare, and other non-tech enterprises.
+              The leading AI in project management solution for construction, utilities, healthcare, and non-tech enterprises.
             </p>
           </div>
 

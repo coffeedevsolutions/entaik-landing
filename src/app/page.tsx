@@ -3,9 +3,21 @@ import App from "./components/App";
 
 
 export const metadata: Metadata = {
-  title: "Uptaik — Transform Project Intake with AI | Beta Access",
+  title: "Uptaik — AI Project Management Platform | Transform Intake & Automation",
   description:
-    "AI-powered project intake that transforms emails into structured briefs with automated prioritization and Jira integration. Join the beta today.",
+    "AI project management platform that transforms emails into structured briefs with automated prioritization. Top AI for project management tools with Jira integration.",
+  keywords: [
+    "ai project management",
+    "ai in project management", 
+    "ai for project management",
+    "project management platforms",
+    "top project management tools",
+    "AI project intake",
+    "automated project briefs",
+    "project prioritization automation",
+    "Jira integration",
+    "adaptive AI surveys"
+  ],
   alternates: {
     canonical: "https://www.uptaik.com/",
   },
@@ -14,9 +26,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.uptaik.com/",
     siteName: "Uptaik",
-    title: "Uptaik — Transform Project Intake with AI | Beta Access",
+    title: "Uptaik — AI Project Management Platform | Transform Intake & Automation",
     description:
-      "AI-powered project intake that transforms emails into structured briefs with automated prioritization and Jira integration. Join the beta today.",
+      "AI project management platform that transforms emails into structured briefs with automated prioritization. Top AI for project management tools with Jira integration.",
     images: [
       {
         url: "https://www.uptaik.com/og-hero.png",
@@ -28,9 +40,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Uptaik — Transform Project Intake with AI | Beta Access",
+    title: "Uptaik — AI Project Management Platform | Transform Intake",
     description:
-      "AI-powered project intake that transforms emails into structured briefs with automated prioritization and Jira integration. Join the beta today.",
+      "AI project management platform that transforms emails into structured briefs. Top AI for project management tools with automated prioritization and Jira integration.",
     images: ["https://www.uptaik.com/og-hero.png"],
     creator: "@uptaik",
   },
