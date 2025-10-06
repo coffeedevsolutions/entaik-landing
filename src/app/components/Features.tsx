@@ -41,7 +41,7 @@ export function Features() {
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl lg:text-4xl">Everything You Need to Streamline Intake</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            From first question to final work item, IntakeAI automates the entire intake pipeline.
+            From first question to final work item, Uptaik automates the entire intake pipeline.
           </p>
         </div>
 
