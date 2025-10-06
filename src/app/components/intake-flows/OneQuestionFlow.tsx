@@ -156,7 +156,7 @@ export function OneQuestionFlow() {
               <div>
                 <h2 className="text-foreground mb-2">Request Complete!</h2>
                 <p className="text-muted-foreground">
-                  We've gathered all the information needed to process your request.
+                  We&apos;ve gathered all the information needed to process your request.
                 </p>
               </div>
               <Button className="bg-primary hover:bg-primary/90 gap-2">

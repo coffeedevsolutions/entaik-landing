@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { Brain, FileText, Shield, BarChart3, ChevronRight, ChevronLeft } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
 
 const features = [
   {
@@ -46,10 +45,8 @@ interface FeaturesNavProps {
 
 export function FeaturesNav({ variant = "top" }: FeaturesNavProps) {
   const pathname = usePathname();
-  const [mobileExpanded, setMobileExpanded] = useState(false);
 
   const currentFeatureIndex = features.findIndex(f => f.href === pathname);
-  const currentFeature = features[currentFeatureIndex];
   const prevFeature = currentFeatureIndex > 0 ? features[currentFeatureIndex - 1] : null;
   const nextFeature = currentFeatureIndex < features.length - 1 ? features[currentFeatureIndex + 1] : null;
 
