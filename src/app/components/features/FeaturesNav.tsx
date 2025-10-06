@@ -22,20 +22,20 @@ const features = [
     gradient: "from-pink-500 to-rose-600"
   },
   {
-    id: "enterprise-integrations",
-    name: "Enterprise & Integrations",
-    description: "Secure, scalable, and compliant",
-    icon: Shield,
-    href: "/features/enterprise-integrations",
-    gradient: "from-teal-500 to-emerald-600"
-  },
-  {
     id: "analytics-intelligence",
     name: "Analytics & Intelligence",
     description: "Data-driven insights and predictions",
     icon: BarChart3,
     href: "/features/analytics-intelligence",
     gradient: "from-orange-500 to-amber-600"
+  },
+  {
+    id: "enterprise-integrations",
+    name: "Enterprise & Integrations",
+    description: "Secure, scalable, and compliant",
+    icon: Shield,
+    href: "/features/enterprise-integrations",
+    gradient: "from-teal-500 to-emerald-600"
   }
 ];
 

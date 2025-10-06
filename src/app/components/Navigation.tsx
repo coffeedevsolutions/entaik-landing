@@ -327,19 +327,6 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
                 </Link>
 
                 <Link
-                  href="/features/enterprise-integrations"
-                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent transition-colors text-left group"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center flex-shrink-0 group-hover:bg-teal-200 transition-colors">
-                    <Shield className="w-5 h-5 text-teal-600" />
-                  </div>
-                  <div className="space-y-1">
-                    <div className="font-medium group-hover:text-teal-600 transition-colors">Enterprise & Integrations</div>
-                    <div className="text-sm text-muted-foreground">Secure, scalable platform</div>
-                  </div>
-                </Link>
-
-                <Link
                   href="/features/analytics-intelligence"
                   className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent transition-colors text-left group"
                 >
@@ -349,6 +336,19 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
                   <div className="space-y-1">
                     <div className="font-medium group-hover:text-orange-600 transition-colors">Analytics & Intelligence</div>
                     <div className="text-sm text-muted-foreground">Data-driven insights & predictions</div>
+                  </div>
+                </Link>
+
+                <Link
+                  href="/features/enterprise-integrations"
+                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent transition-colors text-left group"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center flex-shrink-0 group-hover:bg-teal-200 transition-colors">
+                    <Shield className="w-5 h-5 text-teal-600" />
+                  </div>
+                  <div className="space-y-1">
+                    <div className="font-medium group-hover:text-teal-600 transition-colors">Enterprise & Integrations</div>
+                    <div className="text-sm text-muted-foreground">Secure, scalable platform</div>
                   </div>
                 </Link>
 

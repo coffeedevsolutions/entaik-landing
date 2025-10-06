@@ -6,9 +6,9 @@ import {
   RefreshCw, 
   Brain, 
   Clock,
-  Target,
-  GitBranch,
-  NotebookText
+  BookOpen,
+  Shield,
+  BarChart3
 } from "lucide-react";
 import { Card } from "./ui/card";
 import Link from "next/link";
@@ -44,27 +44,35 @@ export function ProblemSolution() {
   const solutions = [
     {
       icon: Sparkles,
-      title: "AI-Powered Intake",
-      description: "Adaptive surveys that ask intelligent follow-ups in real-time",
-      gradient: "from-blue-500 to-cyan-500"
+      title: "AI Survey Platform",
+      description: "Create smarter adaptive surveys that ask intelligent follow-ups in real-time",
+      gradient: "from-blue-500 to-cyan-500",
+      hoverClasses: "group-hover:from-blue-500 group-hover:to-cyan-500",
+      href: "/features/ai-survey-platform"
     },
     {
-      icon: NotebookText,
-      title: "Automated Docs",
-      description: "Automatically generate standardized project briefs with AI",
-      gradient: "from-orange-500 to-yellow-500"
+      icon: BookOpen,
+      title: "Automated Documentation",
+      description: "Turn conversations into project docs—automatically generate standardized briefs with AI",
+      gradient: "from-pink-500 to-rose-500",
+      hoverClasses: "group-hover:from-pink-500 group-hover:to-rose-500",
+      href: "/features/automated-documentation"
     },
     {
-      icon: Target,
-      title: "Smart Prioritization",
-      description: "Built-in scoring with RICE, WSJF, MoSCoW, or custom frameworks",
-      gradient: "from-purple-500 to-pink-500"
+      icon: BarChart3,
+      title: "Analytics & Intelligence",
+      description: "Data-driven insights & predictions—built-in scoring with RICE, WSJF, MoSCoW frameworks",
+      gradient: "from-orange-500 to-amber-500",
+      hoverClasses: "group-hover:from-orange-500 group-hover:to-amber-500",
+      href: "/features/analytics-intelligence"
     },
     {
-      icon: GitBranch,
-      title: "Seamless Integration",
-      description: "Connects with top project management tools like Jira, Asana, and Linear—structured work items flow automatically",
-      gradient: "from-emerald-500 to-teal-500"
+      icon: Shield,
+      title: "Enterprise & Integrations",
+      description: "Secure, scalable platform that connects with top project management tools like Jira, Asana, and Linear",
+      gradient: "from-teal-500 to-emerald-500",
+      hoverClasses: "group-hover:from-teal-500 group-hover:to-emerald-500",
+      href: "/features/enterprise-integrations"
     }
   ];
 
@@ -134,19 +142,25 @@ export function ProblemSolution() {
               {solutions.map((solution, index) => {
                 const Icon = solution.icon;
                 return (
-                  <Card key={index} className="p-8 text-center space-y-6 bg-white border-gray-200 hover:border-gray-300 hover:shadow-xl transition-all duration-300 group">
-                    <div className="relative">
-                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${solution.gradient} text-white flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                        <Icon className="w-8 h-8" />
+                  <Link key={index} href={solution.href} className="block">
+                    <Card className="p-8 text-center space-y-6 bg-white border-gray-200 hover:border-gray-300 hover:shadow-xl transition-all duration-300 group cursor-pointer h-full">
+                      <div className="relative">
+                        <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${solution.gradient} text-white flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                          <Icon className="w-8 h-8" />
+                        </div>
+                        {/* Subtle glow effect */}
+                        <div className={`absolute inset-0 w-16 h-16 rounded-2xl bg-gradient-to-br ${solution.gradient} opacity-10 blur-xl mx-auto group-hover:opacity-20 transition-opacity`} />
                       </div>
-                      {/* Subtle glow effect */}
-                      <div className={`absolute inset-0 w-16 h-16 rounded-2xl bg-gradient-to-br ${solution.gradient} opacity-10 blur-xl mx-auto group-hover:opacity-20 transition-opacity`} />
-                    </div>
-                    <div className="space-y-4">
-                      <h4 className="text-xl font-bold text-gray-900">{solution.title}</h4>
-                      <p className="text-gray-600 leading-relaxed">{solution.description}</p>
-                    </div>
-                  </Card>
+                      <div className="space-y-4">
+                        <h4 className={`text-xl font-bold text-gray-900 group-hover:bg-gradient-to-r ${solution.hoverClasses} group-hover:bg-clip-text group-hover:text-transparent transition-all`}>{solution.title}</h4>
+                        <p className="text-gray-600 leading-relaxed">{solution.description}</p>
+                      </div>
+                      <div className="flex items-center justify-center gap-2 text-blue-600 transition-all group-hover:gap-3">
+                        <span className="text-sm font-semibold">Learn more</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </div>
+                    </Card>
+                  </Link>
                 );
               })}
             </div>
