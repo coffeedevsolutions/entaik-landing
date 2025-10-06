@@ -6,7 +6,7 @@ import { getAllBlogPosts } from "@/lib/posts";
 
 export const metadata: Metadata = {
   title: "Blog - Uptaik | AI Project Management & Intake Insights",
-  description: "Discover AI in project management best practices, top project management tools reviews, frameworks for AI project management platforms, and automation insights for enterprise teams.",
+  description: "AI project management best practices, top tools reviews, prioritization frameworks, and automation insights for enterprise teams.",
   keywords: [
     "ai project management",
     "ai in project management",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     title: "Blog - Uptaik | AI Project Management & Automation Insights",
-    description: "Discover AI in project management best practices, top project management tools, and automation insights for enterprise teams.",
+    description: "AI project management best practices, top tools reviews, prioritization frameworks, and automation insights for enterprise teams.",
     url: "https://www.uptaik.com/blog",
     siteName: "Uptaik",
     images: [
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Uptaik Blog | AI Project Management Insights",
-    description: "Best practices for AI in project management, top tools, and automation insights.",
+    description: "AI project management best practices, top tools reviews, prioritization frameworks, and automation insights for enterprise teams.",
     images: ["https://www.uptaik.com/og-hero.png"]
   },
 };

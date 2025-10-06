@@ -3,9 +3,9 @@ import App from "./components/App";
 
 
 export const metadata: Metadata = {
-  title: "Uptaik — AI Project Management Platform | Transform Intake & Automation",
+  title: "Uptaik | AI Project Management & Intake Platform",
   description:
-    "AI project management platform that transforms emails into structured briefs with automated prioritization. Top AI for project management tools with Jira integration.",
+    "AI project management platform that transforms emails into structured briefs with automated prioritization and Jira integration.",
   keywords: [
     "ai project management",
     "ai in project management", 
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.uptaik.com/",
     siteName: "Uptaik",
-    title: "Uptaik — AI Project Management Platform | Transform Intake & Automation",
+    title: "Uptaik | AI Project Management & Intake Platform",
     description:
-      "AI project management platform that transforms emails into structured briefs with automated prioritization. Top AI for project management tools with Jira integration.",
+      "AI project management platform that transforms emails into structured briefs with automated prioritization and Jira integration.",
     images: [
       {
         url: "https://www.uptaik.com/og-hero.png",
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Uptaik — AI Project Management Platform | Transform Intake",
+    title: "Uptaik | AI Project Management & Intake Platform",
     description:
-      "AI project management platform that transforms emails into structured briefs. Top AI for project management tools with automated prioritization and Jira integration.",
+      "AI project management platform that transforms emails into structured briefs with automated prioritization and Jira integration.",
     images: ["https://www.uptaik.com/og-hero.png"],
     creator: "@uptaik",
   },
