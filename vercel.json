@@ -1,16 +1,8 @@
 {
-  "redirects": [
+  "crons": [
     {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "uptaik.com"
-        }
-      ],
-      "destination": "https://www.uptaik.com/:path*",
-      "permanent": true
+      "path": "/api/indexnow/cron",
+      "schedule": "0 */6 * * *"
     }
   ]
 }
-  

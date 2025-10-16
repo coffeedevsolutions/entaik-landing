@@ -1,0 +1,56 @@
+name: IndexNow Auto-Submit
+
+# Trigger this workflow after successful deployment
+on:
+  # Automatically run after deployments
+  deployment_status:
+  
+  # Or manually trigger from GitHub Actions tab
+  workflow_dispatch:
+    inputs:
+      submit_all:
+        description: 'Submit entire sitemap (use for major updates only)'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  submit-indexnow:
+    name: Submit URLs to IndexNow
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' || github.event.deployment_status.state == 'success'
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Submit main pages to IndexNow
+        run: |
+          # Submit key pages that change frequently
+          curl -X POST https://www.uptaik.com/api/indexnow \
+            -H "Content-Type: application/json" \
+            -d '{
+              "urls": [
+                "https://www.uptaik.com",
+                "https://www.uptaik.com/features",
+                "https://www.uptaik.com/workflows",
+                "https://www.uptaik.com/pricing",
+                "https://www.uptaik.com/blog"
+              ]
+            }'
+      
+      - name: Submit entire sitemap (manual trigger only)
+        if: github.event.inputs.submit_all == 'true'
+        run: |
+          npm install -D tsx
+          npx tsx scripts/submit-sitemap-indexnow.ts
+
