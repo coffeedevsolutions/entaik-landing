@@ -12,7 +12,7 @@ interface UseIndexNowResult {
   isSubmitting: boolean;
   error: string | null;
 }
-
+ 
 export function useIndexNow(): UseIndexNowResult {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
