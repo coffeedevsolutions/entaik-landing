@@ -3,10 +3,14 @@ import { submitUrls } from '../../../../../lib/indexnow';
 
 /**
  * Vercel Cron Job for IndexNow
- * Runs every 6 hours to submit key pages to search engines
+ * Runs once daily (2 AM) to submit key pages to search engines
+ * 
+ * Hobby Plan Limits:
+ * - Runs once per day
+ * - Execution time may vary within the hour (e.g., 2:00 AM - 2:59 AM)
  * 
  * This is configured in vercel.json:
- * "crons": [{ "path": "/api/indexnow/cron", "schedule": "0 *\/6 * * *" }]
+ * "crons": [{ "path": "/api/indexnow/cron", "schedule": "0 2 * * *" }]
  */
 export async function GET(request: NextRequest) {
   try {
