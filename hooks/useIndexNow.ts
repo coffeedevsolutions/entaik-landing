@@ -36,7 +36,7 @@ export function useIndexNow(): UseIndexNowResult {
         setError('Failed to submit URL to IndexNow');
         return false;
       }
-
+ 
       return true;
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Unknown error');
