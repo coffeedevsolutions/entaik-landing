@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { AISurveyPlatform } from "@/app/components/features/AISurveyPlatform";
+import { BreadcrumbSchema } from "@/app/components/BreadcrumbSchema";
 
 const title = "AI Survey Platform | Uptaik";
 const description = "Create smarter surveys that actually get completed. AI-driven intake forms that adapt in real time, reduce fatigue, and capture better business data.";
@@ -36,6 +37,17 @@ export const metadata: Metadata = {
 };
 
 export default function AISurveyPlatformPage() {
-  return <AISurveyPlatform />;
+  return (
+    <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", item: "https://www.uptaik.com" },
+          { name: "Features", item: "https://www.uptaik.com/features" },
+          { name: "AI Survey Platform", item: "https://www.uptaik.com/features/ai-survey-platform" }
+        ]}
+      />
+      <AISurveyPlatform />
+    </>
+  );
 }
 

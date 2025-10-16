@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import App from "./components/App";
+import { OrganizationSchema } from "./components/OrganizationSchema";
 
 
 export const metadata: Metadata = {
@@ -55,7 +56,10 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      {/* Structured Data for SEO */}
+      {/* Organization Structured Data */}
+      <OrganizationSchema />
+      
+      {/* SoftwareApplication Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

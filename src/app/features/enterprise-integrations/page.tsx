@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { EnterpriseIntegrations } from "@/app/components/features/EnterpriseIntegrations";
+import { BreadcrumbSchema } from "@/app/components/BreadcrumbSchema";
 
 const title = "Enterprise Integrations | Uptaik";
 const description = "Secure, scalable, and compliant—built for IT leaders and enterprise buyers. Enterprise-grade security and integrations you can trust.";
@@ -36,6 +37,17 @@ export const metadata: Metadata = {
 };
 
 export default function EnterpriseIntegrationsPage() {
-  return <EnterpriseIntegrations />;
+  return (
+    <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", item: "https://www.uptaik.com" },
+          { name: "Features", item: "https://www.uptaik.com/features" },
+          { name: "Enterprise & Integrations", item: "https://www.uptaik.com/features/enterprise-integrations" }
+        ]}
+      />
+      <EnterpriseIntegrations />
+    </>
+  );
 }
 

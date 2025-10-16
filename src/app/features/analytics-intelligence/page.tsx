@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { AnalyticsIntelligence } from "@/app/components/features/AnalyticsIntelligence";
+import { BreadcrumbSchema } from "@/app/components/BreadcrumbSchema";
 
 const title = "Analytics & Intelligence | Uptaik";
 const description = "Unlock insights into performance, predict risks, and optimize outcomes with AI analytics. Transform raw responses into actionable intelligence.";
@@ -36,6 +37,17 @@ export const metadata: Metadata = {
 };
 
 export default function AnalyticsIntelligencePage() {
-  return <AnalyticsIntelligence />;
+  return (
+    <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", item: "https://www.uptaik.com" },
+          { name: "Features", item: "https://www.uptaik.com/features" },
+          { name: "Analytics & Intelligence", item: "https://www.uptaik.com/features/analytics-intelligence" }
+        ]}
+      />
+      <AnalyticsIntelligence />
+    </>
+  );
 }
 

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { AutomatedDocumentation } from "@/app/components/features/AutomatedDocumentation";
+import { BreadcrumbSchema } from "@/app/components/BreadcrumbSchema";
 
 const title = "Automated Documentation | Uptaik";
 const description = "Save hours of manual work by transforming intake responses into structured briefs, work plans, and backlog items with AI-powered automation.";
@@ -36,6 +37,17 @@ export const metadata: Metadata = {
 };
 
 export default function AutomatedDocumentationPage() {
-  return <AutomatedDocumentation />;
+  return (
+    <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", item: "https://www.uptaik.com" },
+          { name: "Features", item: "https://www.uptaik.com/features" },
+          { name: "Automated Documentation", item: "https://www.uptaik.com/features/automated-documentation" }
+        ]}
+      />
+      <AutomatedDocumentation />
+    </>
+  );
 }
 

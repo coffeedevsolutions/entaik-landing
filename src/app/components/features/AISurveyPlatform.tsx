@@ -23,7 +23,8 @@ import {
   Heart,
   Building2,
   CheckCircle,
-  ArrowRight
+  ArrowRight,
+  ArrowLeft
 } from "lucide-react";
 
 interface AISurveyPlatformProps {
@@ -153,6 +154,19 @@ const integrationPoints = [
 export function AISurveyPlatform({ onNavigate }: AISurveyPlatformProps) {
   return (
     <div className="pb-0 font-[family-name:var(--font-suse-mono)]">
+      {/* Breadcrumb Navigation */}
+      <div className="bg-muted/30 border-b border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <Link 
+            href="/features"
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors group"
+          >
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+            <span>All Features</span>
+          </Link>
+        </div>
+      </div>
+
       {/* Top Features Navigation */}
       <FeaturesNav variant="top" />
       
