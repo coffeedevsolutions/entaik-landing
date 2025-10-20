@@ -173,7 +173,7 @@ export function ProblemSolution() {
                 Ready to eliminate project intake chaos?
               </p>
               <Link 
-                href="/features/ai-survey-platform"
+                href="/features"
                 className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors cursor-pointer"
               >
                 <span>Discover how Uptaik works</span>
