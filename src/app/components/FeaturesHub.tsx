@@ -116,6 +116,17 @@ export function FeaturesHub({ onNavigate }: FeaturesHubProps) {
                       <p className="text-muted-foreground">
                         {feature.description}
                       </p>
+                      {feature.slug === "ai-survey-platform" && (
+                        <p className="text-sm">
+                          Learn more about our
+                          {" "}
+                          <Link href="/features/ai-survey-platform" className="underline underline-offset-4">
+                            AI survey platform
+                          </Link>
+                          {" "}
+                          and how it reduces survey fatigue.
+                        </p>
+                      )}
                     </div>
                   </div>
 

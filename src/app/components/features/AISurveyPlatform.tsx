@@ -179,9 +179,9 @@ export function AISurveyPlatform({ onNavigate }: AISurveyPlatformProps) {
           </Badge>
           
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
-            Your Project Discovery <br />
+            AI Survey Platform: <br />
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Without All the Meetings
+              Adaptive Intake Surveys Without All the Meetings
             </span>
           </h1>
           
@@ -235,6 +235,35 @@ export function AISurveyPlatform({ onNavigate }: AISurveyPlatformProps) {
         {/* Intake Flow Samples */}
         <div className="mb-20">
           <IntakeSamples />
+        </div>
+
+        {/* Deep Technical Detail - Page Unique */}
+        <div className="mb-20">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">How Fatigue Detection Works</h2>
+            <p className="text-lg text-gray-600">
+              A brief look under the hood at how we balance completion rates with data quality.
+            </p>
+          </div>
+          <Card className="p-8">
+            <div className="space-y-4 text-gray-700 leading-relaxed">
+              <p>
+                Our fatigue detection combines engagement signals (response time deltas, free-text length trends, abandon events),
+                coverage metrics (topic and requirement coverage via embeddings), and adaptive thresholds to decide when to stop.
+              </p>
+              <p>
+                We compute a rolling engagement score using an exponential moving average over interaction features. In parallel,
+                we estimate requirement coverage by comparing extracted entities and intents against a domain template using vector similarity.
+                When engagement drops below a sensitivity-adjusted threshold and coverage exceeds your configured target, the engine triggers
+                smart completion and summarizes remaining low-signal questions.
+              </p>
+              <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                <li>Embedding model for semantic coverage checks with configurable similarity cutoffs</li>
+                <li>EMA-based engagement score blending time, edits, and verbosity features</li>
+                <li>Guardrails to always ask critical compliance or dependency questions</li>
+              </ul>
+            </div>
+          </Card>
         </div>
 
         {/* Feature Grid */}

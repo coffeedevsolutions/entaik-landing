@@ -39,6 +39,30 @@ export const metadata: Metadata = {
 export default function AISurveyPlatformPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "Uptaik AI Survey Platform",
+            applicationCategory: "BusinessApplication",
+            operatingSystem: "Web",
+            url,
+            description:
+              "Adaptive AI intake surveys that reduce fatigue and capture complete requirements in fewer questions.",
+            offers: {
+              "@type": "Offer",
+              price: "0",
+              priceCurrency: "USD",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "Uptaik",
+            },
+          }),
+        }}
+      />
       <BreadcrumbSchema
         items={[
           { name: "Home", item: "https://www.uptaik.com" },
