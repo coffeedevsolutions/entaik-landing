@@ -6,7 +6,7 @@ import { OrganizationSchema } from "./components/OrganizationSchema";
 export const metadata: Metadata = {
   title: "Uptaik | AI Project Management & Intake Platform",
   description:
-    "AI project management platform that transforms emails into structured briefs with automated prioritization and Jira integration.",
+    "AI project management platform that transforms project intake surveys into structured briefs and solutions with automated prioritization and project management software integrations.",
   keywords: [
     "ai project management",
     "ai in project management", 
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Uptaik",
     title: "Uptaik | AI Project Management & Intake Platform",
     description:
-      "AI project management platform that transforms emails into structured briefs with automated prioritization and Jira integration.",
+      "AI project management platform that transforms project intake surveys into structured briefs and solutions with automated prioritization and project management software integrations.",
     images: [
       {
         url: "https://www.uptaik.com/og-hero.png",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Uptaik | AI Project Management & Intake Platform",
     description:
-      "AI project management platform that transforms emails into structured briefs with automated prioritization and Jira integration.",
+      "AI project management platform that transforms project intake surveys into structured briefs and solutions with automated prioritization and project management software integrations.",
     images: ["https://www.uptaik.com/og-hero.png"],
     creator: "@uptaik",
   },

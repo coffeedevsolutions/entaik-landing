@@ -7,7 +7,7 @@ export function OrganizationSchema() {
     "name": "Uptaik",
     "url": "https://www.uptaik.com",
     "logo": "https://www.uptaik.com/og-hero.png",
-    "description": "AI project management platform that transforms emails into structured briefs with automated prioritization and Jira integration.",
+    "description": "AI project management platform that transforms project intake surveys into structured briefs and solutions with automated prioritization and project management software integrations.",
     "sameAs": [
       "https://www.linkedin.com/company/uptaik",
       "https://twitter.com/uptaik"
