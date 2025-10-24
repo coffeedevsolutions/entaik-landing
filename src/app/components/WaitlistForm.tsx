@@ -11,8 +11,8 @@ export function WaitlistForm() {
   }, []);
 
   return (
-    <section id="waitlist" className="py-20 lg:py-32 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 font-[family-name:var(--font-suse-mono)]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="waitlist" className="py-8 lg:py-12 font-[family-name:var(--font-suse-mono)]">
+      <div className="px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left - Value Props */}
           <div className="space-y-8">
@@ -39,7 +39,7 @@ export function WaitlistForm() {
           </div>
 
           {/* Right - HubSpot Form */}
-          <div className="bg-background rounded-2xl shadow-xl p-8 border border-border">
+          <div className="bg-background p-8 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
             {mounted && (
               <div 
                 className="hs-form-frame min-h-[400px]" 

@@ -30,8 +30,8 @@ const articles = [
 export function Resources() {
 
   return (
-    <section id="resources" className="py-20 lg:py-32 font-[family-name:var(--font-suse-mono)]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="resources" className="py-8 lg:py-12 font-[family-name:var(--font-suse-mono)]">
+      <div className="px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl lg:text-4xl">Resources & Insights</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -42,8 +42,8 @@ export function Resources() {
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
           {articles.map((article, index) => (
             <Link key={index} href={`/blog/${article.id}`} className="block">
-              <Card className="p-6 space-y-4 hover:shadow-lg transition-all group cursor-pointer">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-blue-100 text-blue-600">
+              <Card className="p-6 space-y-4 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all group cursor-pointer border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-[#D99152] text-white border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                 <BookOpen className="w-6 h-6" />
               </div>
               
@@ -76,7 +76,7 @@ export function Resources() {
             <Button 
               variant="outline" 
               size="lg" 
-              className="gap-2 cursor-pointer"
+              className="gap-2 cursor-pointer border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] active:translate-x-[4px] active:translate-y-[4px]"
             >
               View All Articles
               <ArrowRight className="w-4 h-4" />

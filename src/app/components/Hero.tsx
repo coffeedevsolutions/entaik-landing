@@ -15,14 +15,14 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden font-[family-name:var(--font-suse-mono)]">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 opacity-50" />
+      {/* Background */}
+      <div className="absolute inset-0" />
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 lg:pt-12 lg:pb-32">
+      <div className="relative px-4 sm:px-6 lg:px-8 pt-4 pb-8 lg:pt-6 lg:pb-12">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Content */}
           <div className="space-y-8">
-            <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100 border-blue-200">
+            <Badge className="bg-[#B8FFCE] text-[#B39871] hover:bg-[#B8FFCE] border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
               Now in Private Beta
             </Badge>
             
@@ -37,10 +37,10 @@ export function Hero() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" onClick={scrollToWaitlist} className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 cursor-pointer">
+              <Button size="lg" onClick={scrollToWaitlist} className="bg-[#A34DFF] hover:bg-[#A34DFF]/90 cursor-pointer border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] active:translate-x-[4px] active:translate-y-[4px]">
                 Join the Beta
               </Button>
-              <Button size="lg" variant="outline" className="gap-2">
+              <Button size="lg" variant="outline" className="gap-2 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] active:translate-x-[4px] active:translate-y-[4px]">
                 <Play className="w-4 h-4" />
                 See How It Works
               </Button>
@@ -53,8 +53,7 @@ export function Hero() {
 
           {/* Right Column - Dashboard Mockup */}
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl blur-3xl opacity-20" />
-            <div className="relative rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
+            <div className="relative border-2 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] overflow-hidden">
               <Image
                 src="/images/screenshot-mockup-2.png"
                 alt="Uptaik AI dashboard mockup showing project intake interface"

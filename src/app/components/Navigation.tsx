@@ -160,7 +160,7 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
             onClick={handleLogoClick}
             className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
           >
-            <div className="relative w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+            <div className="relative w-8 h-8 bg-[#A34DFF] flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
               <Image
                 src="/images/uptaik-logo-2-white.png"
                 alt="Uptaik Logo"
@@ -256,7 +256,7 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
           {/* Right Actions */}
           <div className="hidden lg:flex items-center gap-3">
             <Button 
-                className="cursor-pointer text-base"
+                className="cursor-pointer text-base border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] active:translate-x-[4px] active:translate-y-[4px]"
                 variant="ghost"
                 onClick={() => handleNavigation("request-demo")}
                 >
@@ -264,7 +264,7 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
             </Button>
             <Button 
               onClick={() => handleNavigation("home", "waitlist")}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 cursor-pointer text-base"
+              className="bg-[#A34DFF] hover:bg-[#A34DFF]/90 cursor-pointer text-base border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] active:translate-x-[4px] active:translate-y-[4px]"
             >
               Join the Beta
             </Button>
@@ -298,10 +298,10 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
                 Blog
               </Link>
               <div className="flex flex-col gap-2 pt-2 border-t border-border mt-2">
-                <Button onClick={() => handleNavigation("home", "waitlist")} variant="ghost" className="justify-start">Join the Beta</Button>
+                <Button onClick={() => handleNavigation("home", "waitlist")} variant="ghost" className="justify-start border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[1px] hover:translate-y-[1px]">Join the Beta</Button>
                 <Button 
                   onClick={() => handleNavigation("request-demo")} 
-                  className="justify-start bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                  className="justify-start bg-[#6FB384] hover:bg-[#6FB384]/90 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] active:translate-x-[4px] active:translate-y-[4px]"
                 >
                   Request Demo
                 </Button>
@@ -314,7 +314,7 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
       {/* Mega Dropdowns */}
       {activeDropdown === "features" && (
         <div 
-          className="absolute left-0 right-0 top-full bg-background border-b border-border shadow-xl"
+          className="absolute left-0 right-0 top-full bg-background border-b-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
           onMouseEnter={() => handleMouseEnter("features")}
           onMouseLeave={handleMouseLeave}
         >
@@ -438,7 +438,7 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
       {/* Workflows Dropdown */}
       {activeDropdown === "workflows" && (
         <div 
-          className="absolute left-0 right-0 top-full bg-background border-b border-border shadow-xl"
+          className="absolute left-0 right-0 top-full bg-background border-b-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
           onMouseEnter={() => handleMouseEnter("workflows")}
           onMouseLeave={handleMouseLeave}
         >
@@ -578,7 +578,7 @@ export function Navigation({ onNavigate, currentView }: NavigationProps) {
                   href="/workflows"
                   className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent transition-colors text-left group"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <div className="w-10 h-10 bg-[#023373] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                     <Sparkles className="w-5 h-5 text-white" />
                   </div>
                   <div className="space-y-1">

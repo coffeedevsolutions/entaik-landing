@@ -61,8 +61,8 @@ const industries = [
 
 export function Industries() {
   return (
-    <section id="industries" className="py-20 lg:py-32 bg-muted/30 font-[family-name:var(--font-suse-mono)]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="industries" className="py-8 lg:py-12 font-[family-name:var(--font-suse-mono)]">
+      <div className="px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl lg:text-4xl">Built for Non-Tech Enterprises</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -74,13 +74,13 @@ export function Industries() {
           {industries.map((industry, index) => {
             const Icon = industry.icon;
             return (
-              <Card key={index} className="p-8 space-y-6 hover:shadow-lg transition-shadow">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 text-white">
+              <Card key={index} className="p-8 space-y-6 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-[#D99152] text-white border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                   <Icon className="w-7 h-7" />
                 </div>
                 <div className="space-y-3">
-                  <h3 className="text-2xl">{industry.name}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{industry.description}</p>
+                  <h3 className="text-2xl font-semibold">{industry.name}</h3>
+                  <p className="text-muted-foreground leading-relaxed font-medium">{industry.description}</p>
                 </div>
               </Card>
             );

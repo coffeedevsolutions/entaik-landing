@@ -21,8 +21,8 @@ const outcomes = [
 
 export function Outcomes() {
   return (
-    <section className="py-20 lg:py-32 font-[family-name:var(--font-suse-mono)]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-8 lg:py-12 font-[family-name:var(--font-suse-mono)]">
+      <div className="px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl lg:text-4xl">Measurable Outcomes</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -34,12 +34,12 @@ export function Outcomes() {
           {outcomes.map((outcome, index) => {
             const Icon = outcome.icon;
             return (
-              <Card key={index} className="p-8 space-y-4 text-center hover:shadow-lg transition-shadow border-2">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-100 text-blue-600 mx-auto">
+              <Card key={index} className="p-8 space-y-4 text-center hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-[#C9DFF2] text-[#023373] mx-auto border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                   <Icon className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl">{outcome.title}</h3>
-                <p className="text-muted-foreground">{outcome.description}</p>
+                <h3 className="text-xl font-semibold">{outcome.title}</h3>
+                <p className="text-muted-foreground font-medium">{outcome.description}</p>
               </Card>
             );
           })}

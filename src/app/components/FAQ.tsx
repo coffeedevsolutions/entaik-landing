@@ -95,8 +95,8 @@ import {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
 
-        <section id="faq" className="py-20 lg:py-32 bg-muted/30 font-[family-name:var(--font-suse-mono)]">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="faq" className="py-8 lg:py-12 font-[family-name:var(--font-suse-mono)]">
+          <div className="px-4 sm:px-6 lg:px-8">
             <div className="text-center space-y-4 mb-16">
               <h2 className="text-3xl lg:text-4xl">Frequently Asked Questions</h2>
               <p className="text-lg text-muted-foreground">
@@ -110,7 +110,7 @@ import {
                   key={index} 
                   value={`item-${index}`}
                   id={`faq-${index}`}
-                  className="bg-background border rounded-lg px-6"
+                  className="bg-background border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] px-6"
                 >
                   <AccordionTrigger className="text-left hover:no-underline">
                     <h3 className="text-base lg:text-lg font-medium">{faq.question}</h3>

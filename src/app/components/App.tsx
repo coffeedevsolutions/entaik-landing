@@ -50,18 +50,73 @@ export default function App() {
       case "home":
       default:
         return (
-          <>
+          <div className="min-h-screen">
+            {/* Hero Header - No Container */}
             <HeroHeader />
-            <Hero />
-            <ProblemSolution />
-            <Features />
-            <Outcomes />
-            <Industries />
-            <HowItWorks />
-            <WaitlistForm />
-            <FAQ />
-            <Resources />
-          </>
+
+            {/* Hero Section Container */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] m-4">
+                <Hero />
+              </div>
+            </div>
+
+            {/* Problem Solution Section Container */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] m-4">
+                <ProblemSolution />
+              </div>
+            </div>
+
+            {/* Features Section Container */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] m-4">
+                <Features />
+              </div>
+            </div>
+
+            {/* Outcomes Section Container */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] m-4">
+                <Outcomes />
+              </div>
+            </div>
+
+            {/* Industries Section Container */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] m-4">
+                <Industries />
+              </div>
+            </div>
+
+            {/* How It Works Section Container */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] m-4">
+                <HowItWorks />
+              </div>
+            </div>
+
+            {/* Waitlist Section Container */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] m-4">
+                <WaitlistForm />
+              </div>
+            </div>
+
+            {/* FAQ Section Container */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] m-4">
+                <FAQ />
+              </div>
+            </div>
+
+            {/* Resources Section Container */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] m-4">
+                <Resources />
+              </div>
+            </div>
+          </div>
         );
     }
   };
@@ -74,7 +129,12 @@ export default function App() {
         {renderCurrentView()}
       </main>
       
-      <Footer />
+      {/* Footer Container */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-white border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] m-4">
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 }
