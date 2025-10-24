@@ -4,5 +4,18 @@
       "path": "/api/indexnow/cron",
       "schedule": "0 2 * * *"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "uptaik.com"
+        }
+      ],
+      "destination": "https://www.uptaik.com/$1",
+      "permanent": true
+    }
   ]
 }

@@ -23,9 +23,9 @@ const suseMono = SUSE({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.uptaik.com'),
-  title: "Uptaik — AI-Powered Project Intake & Prioritization",
+  title: "Uptaik | AI Project Management & Intake Platform",
   description:
-    "Consolidate project requests with adaptive AI surveys. Generate project briefs, prioritize requests, and auto-create Jira epics. Perfect for construction, utilities, healthcare, and non-tech enterprises.",
+    "AI project management platform that transforms project intake surveys into structured briefs and solutions with automated prioritization and project management software integrations.",
   keywords: [
     "AI project intake",
     "adaptive intake surveys",
@@ -81,9 +81,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.uptaik.com/",
     siteName: "Uptaik",
-    title: "Uptaik — AI-Powered Project Intake & Prioritization",
+    title: "Uptaik | AI Project Management & Intake Platform",
     description:
-      "Replace static forms with adaptive AI intake, automated briefs, prioritization, and Jira-ready epics.",
+      "AI project management platform that transforms project intake surveys into structured briefs and solutions with automated prioritization and project management software integrations.",
     images: [
       {
         url: "https://www.uptaik.com/og-hero.png",
@@ -95,9 +95,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Uptaik — AI-Powered Project Intake",
+    title: "Uptaik | AI Project Management & Intake Platform",
     description:
-      "Adaptive AI intake surveys, automated documentation, and Jira integration for enterprise teams.",
+      "AI project management platform that transforms project intake surveys into structured briefs and solutions with automated prioritization and project management software integrations.",
     images: ["https://www.uptaik.com/og-hero.png"],
     creator: "@uptaik",
   },
